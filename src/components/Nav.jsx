@@ -13,8 +13,8 @@ const Nav = () => {
     }
 
   return (
-    <header className='fixed w-full'>
-        <div className='text-white bg-[#1D1C1D] shadow-lg shadow-orange-200 lg:my-5 my-10 lg:mx-20 mx-5 flex justify-between px-5 md:py-4 py-3 rounded-[70px] items-center'>
+    <header className='w-full flex justify-center'>
+        <div className='text-white w-[1280px] bg-[#1D1C1D] shadow-lg shadow-orange-200 lg:my-5 my-10 lg:mx-20 mx-5 flex justify-between px-5 md:py-4 py-3 rounded-[70px] items-center'>
             <div className='flex items-center'>
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
                 <h1 className='text-xl'>YourBank</h1>
