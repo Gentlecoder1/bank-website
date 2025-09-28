@@ -3,11 +3,13 @@ import React from 'react'
 const OpenAccount = () => {
   return (
     <div className='w-full flex mx-auto justify-center relative my-7'>
-        <div className='p-8 text-white text-center mx-4 border-2 border-gray-100 rounded-2xl '>
-            <h1 className='mb-3 text-lg'>Start you financial journey with <b className='text-[#92B92C]'>YourBank today!</b></h1>
-            <p className='mb-3'>Lorem ipsum dolor sit amet consectetur. Blandit odio semper risus pellentesque elit. Pellentesque eget ut imperdiet nulla penatibus. Nascetur viverra arcu sed amet cursus purus.</p>
+        <div className='p-8 text-white xl:w-[1280px] md:flex md:text-left text-center justify-between lg:mx-16 mx-5 border-2 border-gray-100 rounded-3xl items-center'>
+            <div className='lg:max-w-[700px] md:max-w-[500px] md:pr-8'>
+                <h1 className='mb-3 text-xl'>Start you financial journey with <b className='text-[#92B92C]'>YourBank today!</b></h1>
+                <p className='mb-3'>Lorem ipsum dolor sit amet consectetur. Blandit odio semper risus pellentesque elit. Pellentesque eget ut imperdiet nulla penatibus. Nascetur viverra arcu sed amet cursus purus.</p>
+            </div>
 
-            <button className='bg-[#CBFE33] text-black rounded-full p-4'>Open Account</button>
+            <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-2xl rounded-full px-4 py-2 mt-3'>Open Account</button>
         </div>
     </div>
   )
