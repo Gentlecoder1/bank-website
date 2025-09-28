@@ -13,11 +13,11 @@ const Nav = () => {
     }
 
   return (
-    <header className='fixed w-full flex justify-center'>
-        <div className='text-white w-[1280px] bg-[#1D1C1D] shadow-lg shadow-orange-200 lg:my-5 my-10 lg:mx-20 mx-5 flex justify-between px-5 md:py-4 py-3 rounded-[70px] items-center'>
+    <header className='sticky lg:w-[1280px] z-10 mx-auto flex flex-col'>
+        <div className='text-white bg-[#1D1C1D] shadow-lg shadow-orange-200 lg:my-5 my-10 mx-5 flex justify-between px-5 md:py-4 py-3 rounded-[70px] items-center'>
             <div className='flex items-center'>
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
-                <h1 className='text-xl'>YourBank</h1>
+                <h1 className='text-xl'>YourBanK</h1>
             </div>
             <ul className='md:flex gap-5 hidden'>
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">Home</a></li>
