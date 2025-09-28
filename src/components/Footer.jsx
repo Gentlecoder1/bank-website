@@ -8,7 +8,7 @@ import { RxDividerVertical } from "react-icons/rx";
 
 const Footer = () => {
   return (
-    <footer className='bg-[#1D1C1D] w-full flex justify-center absolute bottom-0'>
+    <footer className='bg-[#1D1C1D] w-full flex justify-center relative bottom-0'>
         <div className='lg:w-[1280px] lg:mx-16 mx-2 px-5 py-7 flex flex-col justify-center'>
             <div className=''>
                 <div className='flex justify-center items-center mt-3'>
