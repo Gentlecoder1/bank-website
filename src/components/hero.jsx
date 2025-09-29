@@ -16,8 +16,8 @@ const hero = () => {
           className='xl:w-[1279px] md:w-full bg-[#1D1C1D] lg:mx-16 mx-5 border-2 border-gray-100 md:rounded-2xl rounded-3xl p-8 md:p-7 lg:p-12 flex flex-col-reverse md:relative items-center md:items-start'
         >
 
-          {/* Text div - Mobile: centered & stacked below image, Desktop: top-left overlap */}
-          <div className="text-center md:text-left xl:w-[55%] lg:w-[58%] md:w-[65%] md:absolute md:left-8 md:mt-6 lg:mt-0 lg:top-12 lg:left-12 md:z-20 md:p-8 lg:p-14 p-6 bg-[#191919] rounded-3xl md:rounded-tr-none md:rounded-bl-none relative -top-12 md:-top-0 z-10">
+         
+          <div className="text-center md:text-left xl:w-[55%] lg:w-[58%] md:w-[65%] md:absolute md:left-8 md:mt-6 lg:mt-0 lg:top-12 lg:left-12 md:z-20 md:p-8 lg:p-14 p-6 bg-[#191919] rounded-3xl md:rounded-tr-none md:rounded-bl-none relative -mb-10 md:-mb-0 -top-12 md:-top-0 z-10">
             <h1 className="text-white text-3xl md:text-4xl xl:text-5xl font-bold mb-4">
               Welcome to <span className="text-[#92B92C]">YourBank</span> Careers!
             </h1>
@@ -31,7 +31,7 @@ const hero = () => {
             </p>
           </div>
 
-          {/* Image div - Mobile: top of stack, Desktop: right side with extended height */}
+
           <div className="w-full md:w-[57%] md:ml-auto">
             <img 
               src={Career} 
