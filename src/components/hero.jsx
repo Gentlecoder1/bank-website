@@ -5,7 +5,7 @@ import Career from '../assets/career-image.png'
 const hero = () => {
   return (
     <div className='w-full flex mx-auto justify-center relative my-7'>
-        {/* Parent container with background image positioned at top-right */}
+        
         <div 
           style={{ 
             backgroundImage: `url(${Abstract})`, 
