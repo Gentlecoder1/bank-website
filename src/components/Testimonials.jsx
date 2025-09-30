@@ -16,7 +16,7 @@ const Testimonials = () => {
     <div  className='w-full flex mx-auto justify-center relative my-7'>
         <div className='p-8 text-white xl:w-[1280px] lg:w-full md:w-full lg:mx-16 mx-5'>
           <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center'>
-            <div className='xl:max-w-[700px] md:max-w-[500px]'>
+            <div className='xl:max-w-[700px] md:max-w-[500px] md:space-y-3'>
               <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Testimonials</b></h1>
               <p className='text-gray-300'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
             </div>
