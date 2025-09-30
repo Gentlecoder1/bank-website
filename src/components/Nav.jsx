@@ -12,6 +12,15 @@ const Nav = () => {
         setBurger(!burger)
     }
 
+    const [toggle, setToggle] = useState(0)
+
+    const toggleLeft = () => {
+        setToggle(0)
+    }
+    const toggleRight = () => {
+        setToggle(1)
+    }
+
   return (
     <header className='sticky xl:w-[1280px] z-10 mx-auto flex flex-col'>
         <div className='text-white bg-[#1D1C1D] shadow-lg shadow-orange-200 lg:my-5 my-10 lg:mx-8 mx-5 flex justify-between px-5 md:py-4 py-3 rounded-[70px] items-center'>
@@ -25,10 +34,27 @@ const Nav = () => {
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">About</a></li>
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">Security</a></li>
             </ul>
-            <div className='md:flex font-semibold hidden gap-4'>
+            {/* <div className='md:flex font-semibold hidden gap-4'>
                 <a href="#"><div className='py-2 px-3'>Sign up</div></a>
                 <a href="#"><div className='bg-[#CBFE33] text-black hover:bg-[#c3dd75] py-2 px-5 rounded-3xl'>Login</div></a>
+            </div> */}
+
+            <div className={`hidden md:flex space-x-8 md:space-x-2`}>
+              <div
+                onClick={(toggleLeft)}
+                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+              >
+                <a href="#">Sign Up</a>
+              </div>
+
+              <div
+                onClick={(toggleRight)}
+                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+              >
+                <a href="#">Login</a>
+              </div>
             </div>
+
             <div onClick={openNav} className='bg-[#CBFE33] cursor-pointer hover:bg-[#c3dd75] md:hidden rounded-4xl py-2 px-5'>
                 <img src={Burger} alt="Burger-Icon" />
             </div>
@@ -41,9 +67,27 @@ const Nav = () => {
                 <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'><a href="#">About</a></li>
                 <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'><a href="#">Security</a></li>
             </ul>
-            <div className='flex font-semibold space-x-7 justify-center'>
+
+
+            {/* <div className='flex font-semibold space-x-7 justify-center'>
                 <a href="#"><div className='py-2 px-3'>Sign up</div></a>
                 <a href="#"><div className='bg-[#CBFE33] text-black hover:bg-[#c3dd75] py-2 px-5 rounded-3xl'>Login</div></a>
+            </div> */}
+
+            <div className={`flex font-semibold space-x-5 justify-center`}>
+              <div
+                onClick={(toggleLeft)}
+                className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+              >
+                <a href="#">Sign Up</a>
+              </div>
+
+              <div
+                onClick={(toggleRight)}
+                className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+              >
+                <a href="#">Login</a>
+              </div>
             </div>
         </div>
     </header>
