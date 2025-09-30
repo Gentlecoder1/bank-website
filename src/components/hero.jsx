@@ -13,7 +13,7 @@ const hero = () => {
             backgroundPosition: 'right top', 
             backgroundSize: '250px' 
           }} 
-          className='xl:w-[1279px] md:w-full bg-[#1D1C1D] lg:mx-16 mx-5 border-2 border-gray-100 md:rounded-2xl rounded-3xl p-8 md:p-7 lg:p-12 flex flex-col-reverse md:relative items-center md:items-start'
+          className='xl:w-[1279px] md:w-full bg-[#1D1C1D] lg:mx-16 mx-5 border-[1px] border-gray-400 md:rounded-2xl rounded-3xl p-8 md:p-7 lg:p-12 flex flex-col-reverse md:relative items-center md:items-start'
         >
 
          

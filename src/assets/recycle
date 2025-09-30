@@ -1,0 +1,69 @@
+<div className='flex items-center'>
+            <button className='hidden md:block rounded-full w-fit h-fit border-[1px] border-gray-400 bg-[#353335] p-2 cursor-pointer hover:bg-gray-500'><GoArrowLeft size={20} color='#CBFE33' /></button>
+
+            <div className='mt-8 mb-6 text-sm relative mx-auto flex overflow-x-hidden md:max-w-[85%] md:border-0 border-[1px] border-gray-500 rounded-xl'>
+              {/* Fade overlay for left and right edges - Equal fade width */}
+              <div className='absolute inset-0 pointer-events-none z-10 [background:linear-gradient(to_right,#191919_0%,transparent_20%,transparent_80%,#191919_100%)]'></div>
+              
+
+
+              <div className='space-y-4 px-7 lg:max-w-1/3 md:max-w-1/2 max-w-[100%] flex flex-col flex-shrink-0 p-5 text-center'>
+
+                <div className='flex space-x-5 w-full mx-auto items-center'>
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                  <img src={Quote} alt="Quote" />
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                </div>
+
+                <p>I recently started my own business, and YourBanK has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
+
+                <p className='text-xl text-[#CBFE33]'>John D</p>
+              </div>
+
+              <div className='space-y-4 px-7 lg:max-w-1/3 md:max-w-1/2 max-w-[100%] flex flex-col flex-shrink-0 p-5 text-center'>
+
+                <div className='flex space-x-5 w-full mx-auto items-center'>
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                  <img src={Quote} alt="Quote" />
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                </div>
+
+                <p>I recently started my own business, and YourBanK has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
+
+                <p className='text-xl text-[#CBFE33]'>John D</p>
+              </div>
+
+              <div className='space-y-4 px-7 lg:max-w-1/3 md:max-w-1/2 max-w-[100%] flex flex-col flex-shrink-0 p-5 text-center'>
+
+                <div className='flex space-x-5 w-full mx-auto items-center'>
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                  <img src={Quote} alt="Quote" />
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                </div>
+
+                <p>I recently started my own business, and YourBanK has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
+
+                <p className='text-xl text-[#CBFE33]'>John D</p>
+              </div>
+              <div className='space-y-4 px-7 lg:max-w-1/3 md:max-w-1/2 max-w-[100%] flex flex-col flex-shrink-0 p-5 text-center'>
+
+                <div className='flex space-x-5 w-full mx-auto items-center'>
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                  <img src={Quote} alt="Quote" />
+                  <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
+                </div>
+
+                <p>I recently started my own business, and YourBanK has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
+
+                <p className='text-xl text-[#CBFE33]'>John D</p>
+              </div>
+
+            </div>
+
+            <button className='hidden md:block rounded-full w-fit h-fit border-[1px] border-gray-400 bg-[#353335] p-2 cursor-pointer hover:bg-gray-500'><GoArrowRight size={20} color='#CBFE33' /></button>
+          </div>
+
+          <div className='flex gap-3 justify-center md:hidden'>
+            <button className='rounded-full bg-[#353335] border-[1px] border-gray-400 p-2 cursor-pointer hover:bg-gray-500'><GoArrowLeft size={20} color='#CBFE33' /></button>
+            <button className='rounded-full bg-[#353335] border-[1px] border-gray-400 p-2 cursor-pointer hover:bg-gray-500'><GoArrowRight size={20} color='#CBFE33' /></button>
+          </div>
