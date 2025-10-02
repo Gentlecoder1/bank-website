@@ -67,3 +67,6 @@
             <button className='rounded-full bg-[#353335] border-[1px] border-gray-400 p-2 cursor-pointer hover:bg-gray-500'><GoArrowLeft size={20} color='#CBFE33' /></button>
             <button className='rounded-full bg-[#353335] border-[1px] border-gray-400 p-2 cursor-pointer hover:bg-gray-500'><GoArrowRight size={20} color='#CBFE33' /></button>
           </div>
+
+
+  

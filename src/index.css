@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-/* Fix slider width issue */
+/* Fix slider width issue and enforce equal dimensions */
 .slider-container {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .slick-slider {
@@ -17,10 +17,20 @@
 }
 
 .slick-slide {
+  display: flex !important;
   height: auto !important;
-  width: auto !important;
+  flex: 0 0 auto !important;
 }
 
 .slick-slide > div {
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure consistent card dimensions */
+.slick-slide .testimonial-card {
+  height: 320px !important;
+  width: 100% !important;
 }
