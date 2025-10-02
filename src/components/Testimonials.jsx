@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Testimonials = () => {
 
   const [toggle, setToggle] = useState(0)
+  
   const [slidesToShow, setSlidesToShow] = useState(3)
   const sliderRef = useRef(null);
 
