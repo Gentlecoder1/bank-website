@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* FAQ Card Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Fix slider width issue and enforce equal dimensions */
 .slider-container {
   width: 100%;

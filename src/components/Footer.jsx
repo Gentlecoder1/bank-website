@@ -33,9 +33,9 @@ const Footer = () => {
             <hr className='h-[0.1px] bg-gray-400 border-0 mt-6 mb-3' />
             <div className='md:flex justify-between border-[1px] border-gray-400 mt-7 md:p-2 p-5 place-items-center md:rounded-full rounded-2xl'>
                 <div className='flex relative gap-2 md:-top-0 -top-10 w-fit'>
-                    <div className='rounded-full w-fit p-2 bg-[#CBFE33]'><TiSocialFacebook size={25} /></div>
-                    <div className='rounded-full w-fit p-2 bg-[#CBFE33]'><TiSocialTwitter size={25} /></div>
-                    <div className='rounded-full w-fit p-2 bg-[#CBFE33]'><TiSocialLinkedin size={25} /></div>
+                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] hover:scale-115'><TiSocialFacebook size={25} /></div>
+                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] hover:scale-115'><TiSocialTwitter size={25} /></div>
+                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] hover:scale-115'><TiSocialLinkedin size={25} /></div>
                 </div>
                 <div className='md:-mt-0 -mt-5 md:mb-0 mb-4'>
                     <p className='text-md text-gray-100'>YourBank All Rights Reserved</p>
