@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import Quote from '../assets/quote-Icon.png'
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
@@ -8,7 +8,32 @@ import "slick-carousel/slick/slick-theme.css";
 const Testimonials = () => {
 
   const [toggle, setToggle] = useState(0)
+
+  const [slidesToShow, setSlidesToShow] = useState(3)
   const sliderRef = useRef(null);
+
+  // Custom hook to detect screen size
+  useEffect(() => {
+    const updateSlidesToShow = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setSlidesToShow(1); // Mobile
+      } else if (width < 1024) {
+        setSlidesToShow(2); // Tablet
+      } else {
+        setSlidesToShow(3); // Desktop
+      }
+    };
+
+    // Set initial value
+    updateSlidesToShow();
+
+    // Add event listener
+    window.addEventListener('resize', updateSlidesToShow);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateSlidesToShow);
+  }, []);
   
   const toggleLeft = () => {
       setToggle(0)
@@ -34,34 +59,20 @@ const Testimonials = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
+    adaptiveHeight: true,
+    variableWidth: false,
   };
 
   return (
     <div  className='w-full flex mx-auto justify-center relative my-7'>
         <div className='text-white xl:w-[1280px] lg:w-full md:w-full w-full lg:mx-16 mx-5 p-6'>
           <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center'>
-            <div className='xl:max-w-[700px] md:max-w-[500px] md:space-y-3'>
+            <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
               <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Testimonials</b></h1>
-              <p className='text-gray-300'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
+              <p className='text-gray-300 text-sm'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
             </div>
 
             <div className={`rounded-full m-auto border-[1px] border-gray-500 flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`}>
@@ -90,8 +101,8 @@ const Testimonials = () => {
             </button>
 
             <div className='mt-8 mb-6 text-sm relative w-full max-w-6xl mx-auto overflow-hidden'>
-              {/* Fade overlay for left and right edges */}
-              <div className='absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#191919] from-0% via-transparent via-15% to-85% to-[#191919]'></div>
+              {/* Fade overlay for left and right edges - Equal fade width */}
+              <div className='absolute inset-0 pointer-events-none z-10 [background:linear-gradient(to_right,#191919_0%,transparent_20%,transparent_80%,#191919_100%)]'></div>
 
               <div className='slider-container'>
                 <Slider ref={sliderRef} {...settings}>
@@ -160,9 +171,7 @@ const Testimonials = () => {
                       <p>I recently started my own business, and YourBanK has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
                       <p className='text-xl text-[#CBFE33]'>John D</p>
                     </div>
-                  </div>
-
-                  
+                  </div>                 
                 </Slider>
               </div>
             </div>
@@ -195,24 +204,5 @@ const Testimonials = () => {
   )
 }
 
-
-// const data = [
-//   {
-//     testimony: 'YourBank has been my trusted financial partner for years. Their personalized service and innovative digital banking solutions have made managing my finances a breeze.',
-//     name: 'Sara T'
-//   },
-//   {
-//     testimony: 'I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.',
-//     name: 'John D'
-//   },
-//   {
-//     testimony: "I love the convenience of YourBank's mobile banking app. It allows me to stay on top of my finances and make transactions on the go. The app is user-friendly and secure, giving me peace of mind.",
-//     name: 'Emily G'
-//   },
-//   {
-//     testimony: '',
-//     name: ''
-//   }
-// ]
 
 export default Testimonials
