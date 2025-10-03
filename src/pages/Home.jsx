@@ -7,6 +7,7 @@ import Save from '../assets/save-acc.svg'
 import Loan from '../assets/loan.svg'
 import Check from '../assets/check-acc.svg'
 import Abstract from '../assets/Abstract-Design-CTA.png'
+import Abstract2 from '../assets/Abstract2.png'
 import Case1 from '../assets/case1.png'
 import Case2 from '../assets/case2.png'
 import Case3 from '../assets/case3.png'
@@ -197,7 +198,7 @@ const Home = () => {
                 <div className='lg:flex lg:gap-16'>
                     <div style={{ backgroundImage: `url(${Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '30%'}} className='lg:w-[50%] rounded-xl p-5 grid grid-cols-2 gap-4 bg-[#1F1F1E]'>
                         {individualCases.map((individual) => (
-                            <div className='flex flex-col items-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]'>
+                            <div className='flex flex-col items-center justify-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]'>
                                 <img src={individual.image} alt="" />
                                 <p className='text-center'>{individual.text}</p>
                             </div>
@@ -221,8 +222,8 @@ const Home = () => {
                             <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
 
                             <div className='text-center space-y-2 p-6'>
-                                <h1 className='text-4xl font-bold text-[#CBFE33]'>78%</h1>
-                                <p className='text-gray-300 text-sm'>Secure Retirement Planning</p>
+                                <h1 className='text-4xl font-bold text-[#CBFE33]'>63%</h1>
+                                <p className='text-gray-300 text-sm'>Manageable Debt Consolidation</p>
                             </div>
 
                             <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
@@ -230,8 +231,55 @@ const Home = () => {
                             <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
 
                             <div className='text-center space-y-2 p-6'>
-                                <h1 className='text-4xl font-bold text-[#CBFE33]'>78%</h1>
-                                <p className='text-gray-300 text-sm'>Secure Retirement Planning</p>
+                                <h1 className='text-4xl font-bold text-[#CBFE33]'>91%</h1>
+                                <p className='text-gray-300 text-sm'>Reducing financial burdens</p>
+                            </div>
+                        </div>
+
+                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black'>
+                            Load more
+                        </button>
+                    </div>
+                </div>
+
+                <div className='mt-10 lg:flex flex-row-reverse lg:gap-16'>
+                    <div style={{ backgroundImage: `url(${Abstract2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '30%'}} className='lg:w-[50%] rounded-xl p-5 grid grid-cols-2 gap-4 bg-[#1F1F1E]'>
+                        {businessCases.map((business) => (
+                            <div className='flex flex-col items-center justify-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]'>
+                                <img src={business.image} alt="" />
+                                <p className='text-center'>{business.text}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className='lg:w-[50%] mt-10 lg:mt-0 flex flex-col items-center lg:block space-y-2'>
+                        <div className='space-y-3 text-center lg:text-left'>
+                            <h1 className='text-xl font-bold'>For Business</h1>
+                            <p className='text-gray-300 text-sm'> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
+                        </div>
+
+                        <div className='lg:flex space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6'>
+                                <h1 className='text-4xl font-bold text-[#CBFE33]'>65%</h1>
+                                <p className='text-gray-300 text-sm'>Cash Flow Management</p>
+                            </div>
+
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            {/* Desktop vertical line */}
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+
+                            <div className='text-center space-y-2 p-6'>
+                                <h1 className='text-4xl font-bold text-[#CBFE33]'>70%</h1>
+                                <p className='text-gray-300 text-sm'>Drive Business Expansion</p>
+                            </div>
+
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            {/* Desktop vertical line */}
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+
+                            <div className='text-center space-y-2 p-6'>
+                                <h1 className='text-4xl font-bold text-[#CBFE33]'>45%</h1>
+                                <p className='text-gray-300 text-sm'>Streamline payroll processing</p>
                             </div>
                         </div>
 
