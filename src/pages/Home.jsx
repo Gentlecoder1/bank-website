@@ -4,6 +4,8 @@ import homeAbstract from '../assets/home-abstract.png'
 import home2Abstract from '../assets/home2-abstract.png'
 import Homehero from '../assets/home-hero.svg'
 import Save from '../assets/save-acc.svg'
+import Loan from '../assets/loan.svg'
+import Check from '../assets/check-acc.svg'
 import Nav from '../components/nav.jsx'
 import Footer from '../components/Footer.jsx'
 import OpenAccount from '../components/OpenAccount.jsx'
@@ -26,14 +28,17 @@ const Home = () => {
     // individual
     const individualFeatures = [
         {
+            image: Check,
             title: "Checking Accounts",
             body: "Enjoy easy and convenient access to your funds with our range of checking account options. Benefit from features such as online and mobile banking, debit cards, and free ATM access."
         },
         {
+            image: Save,
             title: "Saving Accounts",
             body: "Build your savings with our competitive interest rates and flexible savings account options. Whether you're saving for a specific goal or want to grow your wealth over time, we have the right account for you."
         },
         {
+            image: Loan,
             title: "Loans and Mortgages",
             body: "Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need."
         }
@@ -42,14 +47,17 @@ const Home = () => {
     // business
     const businessFeatures = [
         {
+            image: Check,
             title: "Business Accounts",
             body: "Manage your company’s cash flow with ease through tailored business accounts designed for entrepreneurs and enterprises."
         },
         {
+            image: Save,
             title: "Merchant Services",
             body: "Expand your sales capabilities with our payment processing, POS systems, and secure online transaction options."
         },
         {
+            image: Loan,
             title: "Commercial Loans",
             body: "Fuel your business growth with our flexible commercial loans, available for working capital, expansion, and investments."
         }
@@ -86,7 +94,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='space-y-4'>
+            <div className='space-y-4 my-14'>
                 <div className='p-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
                     <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Features</b></h1>
@@ -112,22 +120,23 @@ const Home = () => {
 
                 <div className="lg:flex text-white px-5 lg:px-15 gap-2 lg:gap-14 space-y-7 lg:space-y-0 lg:items-stretch">
                     {data.map((feature, index) => (
-                    <div
-                        key={index}
-                        className="space-y-3 px-2 lg:flex flex-col text-center items-center flex-1"
-                    >
-                        <img src={Save} alt="Save-Icon" />
-                        <h1 className="text-xl font-bold">{feature.title}</h1>
-                        <p className="text-sm text-gray-300">{feature.body}</p>
+                    <>
+                        <div key={`feature-${index}`} className="space-y-3 px-2 flex flex-col text-center items-center flex-1">
+                            <img src={feature.image} alt="Save-Icon" />
+                            <h1 className="text-xl font-bold">{feature.title}</h1>
+                            <p className="text-sm text-gray-300">{feature.body}</p>
+                        </div>
 
-                        {/* Separator between cards (mobile & desktop) */}
+                        {/* line between cards */}
                         {index < data.length - 1 && (
                         <>
+                            {/* Mobile horizontal line */}
                             <div className="w-full h-[1px] bg-gray-400 opacity-45 lg:hidden"></div>
-                            <div className="hidden lg:block w-2 border-2 border-gray-400 opacity-45 mx-2"></div>
+                            {/* Desktop vertical line */}
+                            <div className="hidden lg:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
                         </>
                         )}
-                    </div>
+                    </>
                     ))}
                 </div>
             </div>
