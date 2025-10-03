@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
 
-    const burgerStyle = "md:hidden mx-5 -mt-6 p-4 w-full mt-4 ease-in-out duration-500 rounded-2xl text-white bg-[#1D1C1D] shadow-md shadow-orange-200 items-center"
+    const burgerStyle = "md:hidden mx-5 -mt-6 p-4 w-full mt-4 ease-in-out duration-500 rounded-2xl text-white bg-[#1D1C1D] shadow-md shadow-[#969b86] items-center"
 
     const [burger, setBurger] = useState(false)
 
@@ -23,7 +23,7 @@ const Nav = () => {
     }
 
   return (
-    <header className='fixed w-full z-100 flex flex-col items-center'>
+    <header className='fixed w-full z-100 flex flex-col items-center opacity-95 xl:px-16 px-5'>
         <div className='xl:w-[1280px] lg:w-full md:w-full w-full lg:px-16 px-5 text-white bg-[#1D1C1D] shadow-lg shadow-[#969b86] lg:my-5 mt-10 flex justify-between md:py-4 py-4 rounded-[70px] items-center'>
             <div className='flex items-center'>
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
