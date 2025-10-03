@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react'
+import { GoArrowUpRight } from "react-icons/go";
 import checkIcon from '../assets/check-icon.png'
 import homeAbstract from '../assets/home-abstract.png'
 import home2Abstract from '../assets/home2-abstract.png'
@@ -34,6 +35,8 @@ const Home = () => {
   const toggleRight = () => {
       setToggle(1)
   }
+
+  const [click, setClick] = useState(0)
 
     // individual
     const individualFeatures = [
@@ -113,22 +116,81 @@ const Home = () => {
     }
    ]
 
+   const online = [
+        {
+            title: '24/7 Account Access',
+            text: 'Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease.'
+        },
+        {
+            title: 'Mobile Banking App',
+            text: 'Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet.'
+        },
+        {
+            title: 'Secure Transactions',
+            text: 'Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information.'
+        },
+        {
+            title: 'Bill Pay and Transfers',
+            text: 'Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks.'
+        },
+   ]
+
+   const financial = [
+        {
+            title: "Budgeting & Expense Tracking",
+            text: "Take control of your finances with built-in budgeting tools. Track your income, expenses, and set spending limits to stay on top of your goals."
+        },
+        {
+            title: "Savings Goals",
+            text: "Plan for the future with customizable savings goals. Whether it’s a vacation, emergency fund, or new home, our tools help you track progress along the way."
+        },
+        {
+            title: "Investment Insights",
+            text: "Grow your wealth with personalized investment recommendations and market insights designed to match your risk tolerance and long-term objectives."
+        },
+        {
+            title: "Credit Score Monitoring",
+            text: "Stay informed about your credit health with real-time credit score monitoring, alerts for changes, and tips to improve your financial profile."
+        }
+   ];
+
+   const support = [
+        {
+            title: "24/7 Live Chat",
+            text: "Connect instantly with our customer care team through live chat support, available around the clock to answer your questions."
+        },
+        {
+            title: "Dedicated Phone Line",
+            text: "Speak directly with a support representative via our toll-free customer service hotline for personalized assistance."
+        },
+        {
+            title: "Email Support",
+            text: "Submit your queries via email and receive detailed responses from our support specialists within one business day."
+        },
+        {
+            title: "Help Center & FAQs",
+            text: "Access a comprehensive library of articles, tutorials, and FAQs to quickly find answers and solutions on your own."
+        }
+   ];
+
+   const datasets = [online, financial, support];
+   const datum = datasets[click];
 
   return (
     <div className=' mx-auto' style={{ backgroundImage: `url(${homeAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '50%' }}>
         <Nav />
 
-        <div className='xl:w-[1280px] lg:w-full md:w-full px-5 md:px-15 flex flex-col mx-auto justify-center relative pt-40'>
-            <div className='text-white md:flex md:text-left text-center gap-20 mx-5'>
+        <div className='xl:w-[1280px] lg:w-full md:w-fulllg:w-full md:w-full w-full lg:mx-16 flex mx-auto px-5 flex-col justify-center relative pt-40'>
+            <div className='text-white md:flex md:text-left text-center gap-20'>
 
                 <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block'>
-                    <div className='bg-[#262727] rounded-full px-5 py-3 flex gap-1 items-center justify-center w-fit'>
+                    <div className='bg-[#262727] rounded-full px-5 py-2 flex gap-1 items-center justify-center w-fit'>
                         <img src={checkIcon} className='w-7 h-7' alt="checked" />
-                        <p>No LLC Required, No Credit Check</p>
+                        <p className='sm:text-sm text-[12px]'>No LLC Required, No Credit Check</p>
                     </div>
 
                     <div className='space-y-3'>
-                        <h1 className='mb-3 text-4xl'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
+                        <h1 className='mb-3 text-3xl sm:text-4xl'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
                         <p className='mb-3'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
                     </div>
         
@@ -143,9 +205,9 @@ const Home = () => {
             </div>
 
             <div className='space-y-4 my-14'>
-                <div className='p-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
+                <div className='sm:p-8 p-4 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
-                        <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Features</b></h1>
+                        <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Products</b></h1>
                         <p className='text-gray-300 text-sm'>Experience a host of powerful features of YourBanK, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                     </div>
 
@@ -286,6 +348,34 @@ const Home = () => {
                         <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black'>
                             Load more
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <div className='space-y-8 my-18 text-white'>
+                <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3'>
+                    <h1 className='text-3xl font-bold'><b className='text-[#CBFE33]'>Our</b> Features</h1>
+                    <p className='text-gray-300 text-sm'>Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
+                </div>
+
+                <div className='lg:flex gap-6 space-y-4'>
+                    <div className='lg::w-[20%] p-6 lg:p-7 xl:p-10 bg-[#1D1C1D] rounded-2xl flex lg:flex-col sm:justify-center whitespace-nowrap overflow-auto scrollbar-hide space-x-5 lg:space-y-5 h-fit'>
+                        <div onClick={() => setClick(0)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`}>Online Banking</div>
+                        <div onClick={() => setClick(1)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`}>Financial Tools</div>
+                        <div onClick={() => setClick(2)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`}>Customer Support</div>
+                    </div>
+
+                    <div className='lg:grid grid-cols-2 gap-5 lg:w-[80%] space-y-5 lg:space-y-0'>
+                        {datum.map((service, index) => (
+                            <div className='bg-[#1D1C1D] rounded-xl p-8 space-y-6 transition-all duration-300 transform hover:scale-105'>
+                                <div className='flex justify-between items-center'>
+                                    <h1 className='font-bold'>{service.title}</h1>
+                                    <GoArrowUpRight size={20} color='#CBFE33' />
+                                </div>
+                                <p className='text-gray-300 text-sm'>{service.text}</p>
+                            </div>
+                        ))}
+                        
                     </div>
                 </div>
             </div>
