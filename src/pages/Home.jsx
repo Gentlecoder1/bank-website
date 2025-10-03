@@ -1,4 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { GoArrowUpRight } from "react-icons/go";
 import checkIcon from '../assets/check-icon.png'
 import homeAbstract from '../assets/home-abstract.png'
@@ -25,8 +27,34 @@ import Faqs from '../components/Faqs.jsx'
 
 const Home = () => {
 
-  
   const [toggle, setToggle] = useState(0)
+  const [click, setClick] = useState(0)
+
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: false,
+      offset: 50,
+      delay: 0,
+      disable: false
+    });
+  }, [])
+
+  // Refresh AOS when toggle state changes
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.refresh();
+    }, 100);
+  }, [toggle])
+
+  // Refresh AOS when click state changes for features section
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.refreshHard(); // Use refreshHard for dynamic content
+    }, 150);
+  }, [click])
 
   const toggleLeft = () => {
     setToggle(0)
@@ -35,8 +63,6 @@ const Home = () => {
   const toggleRight = () => {
       setToggle(1)
   }
-
-  const [click, setClick] = useState(0)
 
     // individual
     const individualFeatures = [
@@ -177,41 +203,41 @@ const Home = () => {
    const datum = datasets[click];
 
   return (
-    <div className=' mx-auto' style={{ backgroundImage: `url(${homeAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '50%' }}>
+    <div className='mx-auto' style={{ backgroundImage: `url(${homeAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '50%' }}>
         <Nav />
 
-        <div className='xl:w-[1280px] lg:w-full md:w-fulllg:w-full md:w-full w-full lg:mx-16 flex mx-auto px-5 flex-col justify-center relative pt-40'>
-            <div className='text-white md:flex md:text-left text-center gap-20'>
+        <div className='max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col justify-center relative pt-25'>
+            <div className='text-white md:flex md:text-left text-center gap-20 py-16'>
 
-                <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block'>
+                <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block' data-aos="fade-up">
                     <div className='bg-[#262727] rounded-full px-5 py-2 flex gap-1 items-center justify-center w-fit'>
                         <img src={checkIcon} className='w-7 h-7' alt="checked" />
                         <p className='sm:text-sm text-[12px]'>No LLC Required, No Credit Check</p>
                     </div>
 
                     <div className='space-y-3'>
-                        <h1 className='mb-3 text-3xl sm:text-4xl'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
+                        <h1 className='mb-3 text-3xl sm:text-4xl font-bold'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
                         <p className='mb-3'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
                     </div>
         
                     <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105'>Open Account</button>
                 </div>
-                
-                <div className='md:w-[50%] w-[100%]' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}}>
+              
+                <div className='md:w-[50%] w-[100%]' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}} data-aos="fade-up">
                     <div className='w-full'>
-                        <img src={Homehero} className='w-full h-full' alt="hero" />
+                        <img src={Homehero} className='w-full h-full' alt="hero" data-aos="fade-up" data-aos-delay="200" />
                     </div>
                 </div>
             </div>
 
-            <div className='space-y-4 my-14'>
-                <div className='sm:p-8 p-4 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
-                    <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
+            <div className='py-16 space-y-8'>
+                <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
+                    <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3' data-aos="fade-up">
                         <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Products</b></h1>
                         <p className='text-gray-300 text-sm'>Experience a host of powerful features of YourBanK, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                     </div>
 
-                    <div className={`rounded-full m-auto border-[1px] border-gray-500 flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`}>
+                    <div className={`rounded-full m-auto border-[1px] border-gray-500 flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
                         <div
                             onClick={toggleLeft}
                             className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
@@ -228,10 +254,10 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="md:flex text-white gap-2 md:gap-14 space-y-7 md:space-y-0 md:items-stretch">
+                <div className="md:flex text-white gap-2 md:gap-14 space-y-7 md:space-y-0 md:items-stretch px-6 sm:px-8">
                     {data.map((feature, index) => (
                     <>
-                        <div key={`feature-${index}`} className="space-y-3 px-2 flex flex-col text-center items-center flex-1">
+                        <div key={`feature-${toggle}-${index}`} className="space-y-3 px-2 flex flex-col text-center items-center flex-1" data-aos="fade-up" data-aos-delay={index * 100}>
                             <img src={feature.image} alt="Icon" />
                             <h1 className="text-xl font-bold">{feature.title}</h1>
                             <p className="text-sm text-gray-300">{feature.body}</p>
@@ -241,9 +267,9 @@ const Home = () => {
                         {index < data.length - 1 && (
                         <>
                             {/* Mobile horizontal line */}
-                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
                             {/* Desktop vertical line */}
-                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
                         </>
                         )}
                     </>
@@ -251,16 +277,16 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='space-y-8 my-14 text-white'>
-                <div className='text-center lg:text-left space-y-3'>
+            <div className='py-16 space-y-8 text-white'>
+                <div className='text-center lg:text-left space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold text-[#CBFE33]'>Use Cases</h1>
                     <p className='text-gray-300 text-sm'>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
                 </div>
                 
-                <div className='lg:flex lg:gap-16'>
-                    <div style={{ backgroundImage: `url(${Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '30%'}} className='lg:w-[50%] rounded-xl p-5 grid grid-cols-2 gap-4 bg-[#1F1F1E]'>
+                <div className='lg:flex lg:gap-16 px-6 sm:px-8'>
+                    <div style={{ backgroundImage: `url(${Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '30%'}} className='lg:w-[50%] rounded-xl p-5 grid grid-cols-2 gap-4 bg-[#1F1F1E]' data-aos="fade-up">
                         {individualCases.map((individual) => (
-                            <div className='flex flex-col items-center justify-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]'>
+                            <div className='flex flex-col items-center justify-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]' data-aos="fade-up">
                                 <img src={individual.image} alt="" />
                                 <p className='text-center'>{individual.text}</p>
                             </div>
@@ -268,46 +294,46 @@ const Home = () => {
                     </div>
 
                     <div className='lg:w-[50%] mt-10 lg:mt-0 flex flex-col items-center lg:block space-y-2'>
-                        <div className='space-y-3 text-center lg:text-left'>
+                        <div className='space-y-3 text-center lg:text-left' data-aos="fade-up">
                             <h1 className='text-xl font-bold'>For Individuals</h1>
                             <p className='text-gray-300 text-sm'>For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers</p>
                         </div>
 
                         <div className='lg:flex space-y-2 p-6'>
-                            <div className='text-center space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>78%</h1>
                                 <p className='text-gray-300 text-sm'>Secure Retirement Planning</p>
                             </div>
 
-                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
                             {/* Desktop vertical line */}
-                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch" data-aos="fade-up"></div>
 
-                            <div className='text-center space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>63%</h1>
                                 <p className='text-gray-300 text-sm'>Manageable Debt Consolidation</p>
                             </div>
 
-                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
                             {/* Desktop vertical line */}
-                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch" data-aos="fade-up"></div>
 
-                            <div className='text-center space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>91%</h1>
                                 <p className='text-gray-300 text-sm'>Reducing financial burdens</p>
                             </div>
                         </div>
 
-                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black'>
+                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
                             Load more
                         </button>
                     </div>
                 </div>
 
-                <div className='mt-10 lg:flex flex-row-reverse lg:gap-16'>
-                    <div style={{ backgroundImage: `url(${Abstract2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '30%'}} className='lg:w-[50%] rounded-xl p-5 grid grid-cols-2 gap-4 bg-[#1F1F1E]'>
+                <div className='mt-10 lg:flex flex-row-reverse lg:gap-16 px-6 sm:px-8'>
+                    <div style={{ backgroundImage: `url(${Abstract2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '30%'}} className='lg:w-[50%] rounded-xl p-5 grid grid-cols-2 gap-4 bg-[#1F1F1E]' data-aos="fade-up">
                         {businessCases.map((business) => (
-                            <div className='flex flex-col items-center justify-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]'>
+                            <div className='flex flex-col items-center justify-center rounded-xl p-4 border-[1px] border-gray-500 bg-[#1D1C1D]' data-aos="fade-up">
                                 <img src={business.image} alt="" />
                                 <p className='text-center'>{business.text}</p>
                             </div>
@@ -321,58 +347,60 @@ const Home = () => {
                         </div>
 
                         <div className='lg:flex space-y-2 p-6'>
-                            <div className='text-center space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>65%</h1>
                                 <p className='text-gray-300 text-sm'>Cash Flow Management</p>
                             </div>
 
-                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
                             {/* Desktop vertical line */}
-                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch" data-aos="fade-up"></div>
 
-                            <div className='text-center space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>70%</h1>
                                 <p className='text-gray-300 text-sm'>Drive Business Expansion</p>
                             </div>
 
-                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden"></div>
+                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
                             {/* Desktop vertical line */}
-                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch"></div>
+                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch" data-aos="fade-up"></div>
 
-                            <div className='text-center space-y-2 p-6'>
+                            <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>45%</h1>
                                 <p className='text-gray-300 text-sm'>Streamline payroll processing</p>
                             </div>
                         </div>
 
-                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black'>
+                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
                             Load more
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div className='space-y-8 my-18 text-white'>
-                <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3'>
+            <div className='py-16 space-y-8 text-white'>
+                <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold'><b className='text-[#CBFE33]'>Our</b> Features</h1>
                     <p className='text-gray-300 text-sm'>Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                 </div>
 
-                <div className='lg:flex gap-6 space-y-4'>
+                <div className='lg:flex gap-6 space-y-4 px-6 sm:px-8'>
                     <div className='lg::w-[20%] p-6 lg:p-7 xl:p-10 bg-[#1D1C1D] rounded-2xl flex lg:flex-col sm:justify-center whitespace-nowrap overflow-auto scrollbar-hide space-x-5 lg:space-y-5 h-fit'>
-                        <div onClick={() => setClick(0)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`}>Online Banking</div>
-                        <div onClick={() => setClick(1)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`}>Financial Tools</div>
-                        <div onClick={() => setClick(2)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`}>Customer Support</div>
+                        <div onClick={() => setClick(0)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Online Banking</div>
+
+                        <div onClick={() => setClick(1)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Financial Tools</div>
+
+                        <div onClick={() => setClick(2)} className={`text-center w-full border-2  rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Customer Support</div>
                     </div>
 
                     <div className='lg:grid grid-cols-2 gap-5 lg:w-[80%] space-y-5 lg:space-y-0'>
                         {datum.map((service, index) => (
-                            <div className='bg-[#1D1C1D] rounded-xl p-8 space-y-6 transition-all duration-300 transform hover:scale-105'>
-                                <div className='flex justify-between items-center'>
+                            <div key={`service-${click}-${index}`} className='bg-[#1D1C1D] rounded-xl p-8 space-y-6 transition-all duration-300 transform hover:scale-105' data-aos="fade-up" data-aos-delay={index * 100}>
+                                <div className='flex justify-between items-center' data-aos="fade-up">
                                     <h1 className='font-bold'>{service.title}</h1>
                                     <GoArrowUpRight size={20} color='#CBFE33' />
                                 </div>
-                                <p className='text-gray-300 text-sm'>{service.text}</p>
+                                <p className='text-gray-300 text-sm' data-aos="fade-up">{service.text}</p>
                             </div>
                         ))}
                         
