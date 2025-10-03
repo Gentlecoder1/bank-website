@@ -70,7 +70,7 @@ const Faqs = () => {
                     
                 </div>
 
-                <button className='text-sm flex items-center gap-2 font-bold border border-gray-600 rounded-full py-2 px-4 mt-6 mx-auto hover:bg-[#CBFE33] hover:text-black transition-all duration-300 transform hover:scale-105 ' onClick={show}>{less ? "Load All" :" Load less"} 
+                <button className='text-sm flex items-center gap-2 font-bold border border-gray-600 rounded-full py-2 px-4 mt-6 mx-auto hover:bg-[#CBFE33] hover:text-black transition-all duration-300 transform hover:scale-105' onClick={show}>{less ? "Load All" :" Load less"} 
                     <div className={`transition-transform duration-300 ${less ? 'rotate-180' : 'rotate-0'}`}>
                         <GoChevronDown size={20} />
                     </div>
