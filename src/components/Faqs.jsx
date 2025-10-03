@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 const Faqs = () => {
 
@@ -34,10 +37,22 @@ const Faqs = () => {
         },
     ]
 
-    const [questions, setQuestions] = useState()
     const [visible, setVisible] = useState(4)
     const [less, setLess] = useState(3)
     
+    useEffect(() => {
+        Aos.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: false,
+          mirror: false,
+          offset: 50,
+          delay: 0,
+          disable: false
+        });
+      }, [])
+    
+
     const show = () => {
         setVisible((prev) => (less ? prev + 3 : prev - 3))
         setLess(prev => !prev);
@@ -48,19 +63,18 @@ const Faqs = () => {
             <div className='text-white xl:w-[1280px] lg:w-full md:w-full w-full lg:mx-16 mx-5'>
                 <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center mb-8'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
-                    <h1 className='text-3xl font-bold'><b className='text-[#CBFE33]'>Frequently</b> Asked Questions</h1>
-                    <p className='text-gray-300 text-sm'>Still you have any questions? Contact our Team via <a className='text-[#CBFE33]' href="@">support@yourbank.com</a></p>
+                        <h1 className='text-3xl font-bold' data-aos="fade-up"><b className='text-[#CBFE33]'>Frequently</b> Asked Questions</h1>
+                        <p className='text-gray-300 text-sm' data-aos="fade-up">Still you have any questions? Contact our Team via <a className='text-[#CBFE33]' href="@">support@yourbank.com</a></p>
                     </div>
                 </div>
 
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-6 transition-all duration-500'>
                     {frequentlys.slice(0, visible).map((frequently, index) => (
                         <div 
-                            key={index}
-                            className='space-y-4 border border-gray-600 rounded-lg p-6 transform transition-all duration-700 ease-out'
-                            style={{
-                                animation: `fadeInUp 0.9s ease-out ${index * 0.5}s forwards`
-                            }}
+                            key={`faq-${visible}-${index}`}
+                            className='space-y-4 border border-gray-600 rounded-lg p-6 transform transition-all duration-300 hover:scale-105'
+                            data-aos="fade-up" 
+                            data-aos-delay={index * 100}
                         >
                             <h1 className='font-bold text-center flex justify-center '>{frequently.question}</h1>
                             <hr className='w-full h-[0.1px] bg-gray-600 border-0' />
@@ -70,7 +84,7 @@ const Faqs = () => {
                     
                 </div>
 
-                <button className='text-sm flex items-center gap-2 font-bold border border-gray-600 rounded-full py-2 px-4 mt-6 mx-auto hover:bg-[#CBFE33] hover:text-black transition-all duration-300 transform hover:scale-105' onClick={show}>{less ? "Load All" :" Load less"} 
+                <button className='text-sm flex items-center gap-2 font-bold border border-gray-600 rounded-full py-2 px-4 mt-6 mx-auto hover:bg-[#CBFE33] hover:text-black transition-all duration-300 transform hover:scale-105' onClick={show} data-aos="fade-up">{less ? "Load All" :" Load less"}
                     <div className={`transition-transform duration-300 ${less ? 'rotate-180' : 'rotate-0'}`}>
                         <GoChevronDown size={20} />
                     </div>

@@ -4,6 +4,8 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Testimonials = () => {
 
@@ -11,6 +13,29 @@ const Testimonials = () => {
   
   const [slidesToShow, setSlidesToShow] = useState(3)
   const sliderRef = useRef(null);
+
+  // useEffect(() => {
+  //   Aos.init({
+  //     duration: 800,
+  //     easing: 'ease-in-out',
+  //     once: false,
+  //     mirror: false,
+  //     offset: 50,
+  //     delay: 0,
+  //     disable: false,
+  //     startEvent: 'DOMContentLoaded'
+  //   });
+  // }, [])
+
+  // // Refresh AOS when toggle state changes
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     if (typeof Aos !== 'undefined') {
+  //       Aos.refresh();
+  //     }
+  //   }, 300);
+  //   return () => clearTimeout(timer);
+  // }, [toggle])
 
   // Custom hook to detect screen size
   useEffect(() => {

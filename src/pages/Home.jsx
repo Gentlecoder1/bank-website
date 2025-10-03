@@ -341,9 +341,9 @@ const Home = () => {
                     </div>
 
                     <div className='lg:w-[50%] mt-10 lg:mt-0 flex flex-col items-center lg:block space-y-2'>
-                        <div className='space-y-3 text-center lg:text-left'>
-                            <h1 className='text-xl font-bold'>For Business</h1>
-                            <p className='text-gray-300 text-sm'> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
+                        <div className='space-y-3 text-center lg:text-left' >
+                            <h1 className='text-xl font-bold' data-aos="fade-up">For Business</h1>
+                            <p className='text-gray-300 text-sm' data-aos="fade-up"> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
                         </div>
 
                         <div className='lg:flex space-y-2 p-6'>
