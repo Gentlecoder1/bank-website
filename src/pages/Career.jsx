@@ -8,9 +8,52 @@ import Hero from '../components/Hero.jsx'
 import Footer from '../components/Footer.jsx'
 import OpenAccount from '../components/OpenAccount.jsx'
 import Faqs from '../components/Faqs.jsx'
+import { AiFillBank } from "react-icons/ai";
 
 
 const Career = () => {
+
+const  [
+  {
+    "title": "IT Security Specialist",
+    "location": "India",
+    "department": "Information Technology",
+    "about": "As an IT Security Specialist at YourBank, you will be responsible for ensuring the security and integrity of our information systems. You will develop and implement security protocols, conduct vulnerability assessments, and respond to security incidents. We are seeking individuals with a strong technical background, knowledge of cybersecurity best practices, and a commitment to maintaining the confidentiality of customer data.",
+    "requirements": [
+      "Bachelor's degree in Computer Science, Information Security, or a related field",
+      "Minimum of 5 years of experience in IT security or a similar role",
+      "In-depth knowledge of network security protocols and technologies",
+      "Familiarity with regulatory frameworks such as PCI DSS and GDPR",
+      "Professional certifications such as CISSP or CISM are preferred"
+    ]
+  },
+  {
+    "title": "IT Security Specialist",
+    "location": "India",
+    "department": "Information Technology",
+    "about": "As an IT Security Specialist at YourBank, you will be responsible for ensuring the security and integrity of our information systems. You will develop and implement security protocols, conduct vulnerability assessments, and respond to security incidents. We are seeking individuals with a strong technical background, knowledge of cybersecurity best practices, and a commitment to maintaining the confidentiality of customer data.",
+    "requirements": [
+      "Bachelor's degree in Computer Science, Information Security, or a related field",
+      "Minimum of 5 years of experience in IT security or a similar role",
+      "In-depth knowledge of network security protocols and technologies",
+      "Familiarity with regulatory frameworks such as PCI DSS and GDPR",
+      "Professional certifications such as CISSP or CISM are preferred"
+    ]
+  },
+  {
+    title: "Risk Analyst",
+    location: "India",
+    department: "Risk Management",
+    about: "As a Risk Analyst at YourBank, you will play a vital role in identifying and assessing potential risks to our organization. You will analyze data, conduct risk assessments, and develop strategies to mitigate risks. We are looking for detail-oriented individuals with strong analytical skills and a solid understanding of risk management principles.",
+    "requirements": [
+      "Bachelor's degree in Finance, Economics, or a related field",
+      "Minimum of 2 years of experience in risk management or a similar role",
+      "Proficiency in risk analysis tools and techniques",
+      "Strong analytical and problem-solving skills",
+      "Knowledge of regulatory requirements and industry best practices"
+    ]
+  }
+]
 
     const values = [
         {
@@ -58,14 +101,14 @@ const Career = () => {
     <div className='flex flex-col items-center'>
         <Nav />
 
-        <div className='xl:w-[1279px]  lg:mx-16 mx-5 flex flex-col justify-center relative pt-25'>
+        <div className='xl:w-[1280px] lg:mx-16 lg:px-8 mx-5 flex flex-col justify-center relative pt-25'>
 
             <Hero />
 
             <div className='my-10 space-y-10 text-white'>
                 <div className='text-center lg:text-left space-y-3 xl:max-w-[1000px] lg:max-w-[700px]' data-aos="fade-up">
                     <h1 className='text-[38px] font-[500]'><b className='text-[#CBFE33]'>Our</b> Values</h1>
-                    <p className='text-[#B3B3B3] text-[16px] font-[300]'>At YourBank, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation. These values define our culture and shape the way we work together to achieve our goals.</p>
+                    <p className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]'>At YourBank, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation. These values define our culture and shape the way we work together to achieve our goals.</p>
                 </div>
 
                 <div className='md:grid md:grid-cols-2 gap-[50px] md:space-y-0 space-y-8'>
@@ -83,7 +126,7 @@ const Career = () => {
             <div className='my-10 space-y-10 text-white'>
                 <div className='text-center lg:text-left space-y-3 xl:max-w-[1000px] lg:max-w-[700px]' data-aos="fade-up">
                     <h1 className='text-[38px] font-[500]'><b className='text-[#CBFE33]'>Our</b> Benefits</h1>
-                    <p className='text-[#B3B3B3] text-[16px] font-[300]'>At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth.</p>
+                    <p className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]'>At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth.</p>
                 </div>
                 
                 <div className="relative overflow-hidden">
@@ -121,12 +164,166 @@ const Career = () => {
             </div>
 
             <div className='my-10 space-y-10 text-white'>
+
                 <div className='text-center lg:text-left space-y-3 xl:max-w-[1000px] lg:max-w-[700px]' data-aos="fade-up">
                     <h1 className='text-[38px] font-[500] text-[#CBFE33]'>Job Openings</h1>
-                    <p className='text-[#B3B3B3] text-[16px] font-[300]'>Explore exciting job openings at YourBank, where we value talent, innovation, and a passion for customer service. Join our team and be part of shaping a brighter future in the banking industry</p>
+                    <p className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]'>Explore exciting job openings at YourBank, where we value talent, innovation, and a passion for customer service. Join our team and be part of shaping a brighter future in the banking industry</p>
                 </div>
                 
-                
+                <div className='md:grid grid-cols-2 gap-4 space-y-5'>
+                    <div className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
+                        <div className='space-y-3'>
+                            <h1 className='text-[24px] font-semibold'>Relationship Manager</h1>
+                            <div className='sm:flex space-y-3 sm:space-x-3'>
+                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: India</div>
+
+                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: Retail Banking</div>
+                            </div>
+                        </div>
+
+                        <div className='space-y-3'>
+                            <h2 className='text-[20px] font-semibold'>About This Job</h2>
+                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.</p>
+                        </div>
+
+                        <div className='space-y-3'>
+                            <h1 className='text-[20px] font-semibold'>Requirements $ Qualifications</h1>
+
+                            <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] text-[#B3B3B3 space-y-3'>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button className='md:text-[16px] text-[14px]  rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
+                            Apply Now
+                        </button>
+                    </div>
+
+                    <div className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
+                        <div className='space-y-3'>
+                            <h1 className='text-[24px] font-semibold'>Relationship Manager</h1>
+                            <div className='sm:flex space-y-3 sm:space-x-3'>
+                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: India</div>
+
+                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: Retail Banking</div>
+                            </div>
+                        </div>
+
+                        <div className='space-y-3'>
+                            <h2 className='text-[20px] font-semibold'>About This Job</h2>
+                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.</p>
+                        </div>
+
+                        <div className='space-y-3'>
+                            <h1 className='text-[20px] font-semibold'>Requirements $ Qualifications</h1>
+
+                            <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] text-[#B3B3B3 space-y-3'>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button className='md:text-[16px] text-[14px]  rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
+                            Apply Now
+                        </button>
+                    </div>
+
+                    <div className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
+                        <div className='space-y-3'>
+                            <h1 className='text-[24px] font-semibold'>Relationship Manager</h1>
+                            <div className='sm:flex space-y-3 sm:space-x-3'>
+                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: India</div>
+
+                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: Retail Banking</div>
+                            </div>
+                        </div>
+
+                        <div className='space-y-3'>
+                            <h2 className='text-[20px] font-semibold'>About This Job</h2>
+                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.</p>
+                        </div>
+
+                        <div className='space-y-3'>
+                            <h1 className='text-[20px] font-semibold'>Requirements $ Qualifications</h1>
+
+                            <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] text-[#B3B3B3 space-y-3'>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                                <li className='flex space-x-2 items-center'>
+                                    <AiFillBank size={25} />
+                                    <span className='flex flex-wrap'>
+                                        Bachelor's degree in Computer Science, Information Security, or a related field
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button className='md:text-[16px] text-[14px]  rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
