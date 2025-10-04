@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './pages/home.jsx'
+import Career from './pages/Career.jsx'
 // import Nav from './components/nav.jsx'
 // import Footer from './components/Footer.jsx'
 // import OpenAccount from './components/OpenAccount.jsx'
@@ -10,7 +11,7 @@ import Home from './pages/home.jsx'
 const App = () => {
   return (
     <>
-      <Home />
+      <Career />
     </>
   )
 }

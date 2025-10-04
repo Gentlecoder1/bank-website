@@ -21,6 +21,29 @@
   }
 }
 
+.line-dashed-x {
+  background: repeating-linear-gradient(
+    to right,
+    rgba(156, 163, 175, 0.5) 0 10px,     
+    transparent 10px 20px                
+  );
+}
+
+.line-dashed-y {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(156, 163, 175, 0.5) 0 10px,     
+    transparent 10px 20px                
+  );
+}
+
+.line-dashed-x,
+.line-dashed-y {
+  filter: drop-shadow(0 0 4px rgba(203, 254, 51, 0.3));
+  opacity: 0.4;
+}
+
+
 /* Fix slider width issue and enforce equal dimensions */
 .slider-container {
   width: 100%;

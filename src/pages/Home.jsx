@@ -19,11 +19,11 @@ import Case5 from '../assets/case5.png'
 import Case6 from '../assets/case6.png'
 import Case7 from '../assets/case7.png'
 import Case8 from '../assets/case8.png'
-import Nav from '../components/nav.jsx'
+import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import OpenAccount from '../components/OpenAccount.jsx'
-import Testimonials from '../components/Testimonials.jsx'
 import Faqs from '../components/Faqs.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 
 const Home = () => {
 
@@ -55,14 +55,6 @@ const Home = () => {
       Aos.refreshHard(); // Use refreshHard for dynamic content
     }, 150);
   }, [click])
-
-  const toggleLeft = () => {
-    setToggle(0)
-  }
-
-  const toggleRight = () => {
-      setToggle(1)
-  }
 
     // individual
     const individualFeatures = [
@@ -220,7 +212,7 @@ const Home = () => {
                         <p className='mb-3'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
                     </div>
         
-                    <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105'>Open Account</button>
+                    <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' >Open Account</button>
                 </div>
               
                 <div className='md:w-[50%] w-[100%]' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}} data-aos="fade-up">
@@ -239,14 +231,14 @@ const Home = () => {
 
                     <div className={`rounded-full m-auto border-[1px] border-gray-500 flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
                         <div
-                            onClick={toggleLeft}
+                            onClick={() => setToggle(0)}
                             className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
                         >
                             For Individuals
                         </div>
 
                         <div
-                            onClick={toggleRight}
+                            onClick={() => setToggle(1)}
                             className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
                         >
                             For Business
@@ -266,10 +258,10 @@ const Home = () => {
                         {/* line between cards */}
                         {index < data.length - 1 && (
                         <>
-                            {/* Mobile horizontal line */}
-                            <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
-                            {/* Desktop vertical line */}
-                            <div className="hidden md:block w-[1px] bg-gray-400 opacity-45 self-stretch" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
+                            {/* Vertical line */}
+                            <div className="hidden md:block absolute w-[1px] h-full line-dashed-y" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
+                            {/* Horizontal line */}
+                            <div className="md:hidden absolute h-[1px] w-full line-dashed-x" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
                         </>
                         )}
                     </>
