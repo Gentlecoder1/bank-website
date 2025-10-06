@@ -13,47 +13,49 @@ import { AiFillBank } from "react-icons/ai";
 
 const Career = () => {
 
-const  [
-  {
-    "title": "IT Security Specialist",
-    "location": "India",
-    "department": "Information Technology",
-    "about": "As an IT Security Specialist at YourBank, you will be responsible for ensuring the security and integrity of our information systems. You will develop and implement security protocols, conduct vulnerability assessments, and respond to security incidents. We are seeking individuals with a strong technical background, knowledge of cybersecurity best practices, and a commitment to maintaining the confidentiality of customer data.",
-    "requirements": [
-      "Bachelor's degree in Computer Science, Information Security, or a related field",
-      "Minimum of 5 years of experience in IT security or a similar role",
-      "In-depth knowledge of network security protocols and technologies",
-      "Familiarity with regulatory frameworks such as PCI DSS and GDPR",
-      "Professional certifications such as CISSP or CISM are preferred"
-    ]
-  },
-  {
-    "title": "IT Security Specialist",
-    "location": "India",
-    "department": "Information Technology",
-    "about": "As an IT Security Specialist at YourBank, you will be responsible for ensuring the security and integrity of our information systems. You will develop and implement security protocols, conduct vulnerability assessments, and respond to security incidents. We are seeking individuals with a strong technical background, knowledge of cybersecurity best practices, and a commitment to maintaining the confidentiality of customer data.",
-    "requirements": [
-      "Bachelor's degree in Computer Science, Information Security, or a related field",
-      "Minimum of 5 years of experience in IT security or a similar role",
-      "In-depth knowledge of network security protocols and technologies",
-      "Familiarity with regulatory frameworks such as PCI DSS and GDPR",
-      "Professional certifications such as CISSP or CISM are preferred"
-    ]
-  },
-  {
-    title: "Risk Analyst",
-    location: "India",
-    department: "Risk Management",
-    about: "As a Risk Analyst at YourBank, you will play a vital role in identifying and assessing potential risks to our organization. You will analyze data, conduct risk assessments, and develop strategies to mitigate risks. We are looking for detail-oriented individuals with strong analytical skills and a solid understanding of risk management principles.",
-    "requirements": [
-      "Bachelor's degree in Finance, Economics, or a related field",
-      "Minimum of 2 years of experience in risk management or a similar role",
-      "Proficiency in risk analysis tools and techniques",
-      "Strong analytical and problem-solving skills",
-      "Knowledge of regulatory requirements and industry best practices"
-    ]
-  }
-]
+    
+    const jobs = [
+        {
+            title: "Relationship Manager",
+            location: "India",
+            department: "Retail Banking",
+            about: "As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.",
+            requirements: [
+                { item: "Bachelor's degree in Business, Finance, or a related field" },
+                { item: "Minimum of 3 years of experience in sales or relationship management in the banking industry" },
+                { item: "Proven track record of meeting and exceeding sales targets" },
+                { item: "Excellent interpersonal and negotiation skills" },
+                { item: "Strong knowledge of banking products and services" }
+            ]
+        },
+        {
+            title: "IT Security Specialist",
+            location: "India",
+            department: "Information Technology",
+            about: "As an IT Security Specialist at YourBank, you will be responsible for ensuring the security and integrity of our information systems. You will develop and implement security protocols, conduct vulnerability assessments, and respond to security incidents. We are seeking individuals with a strong technical background, knowledge of cybersecurity best practices, and a commitment to maintaining the confidentiality of customer data.",
+            requirements: [
+                { item: "Bachelor's degree in Computer Science, Information Security, or a related field" },
+                { item: "Minimum of 5 years of experience in IT security or a similar role" },
+                { item: "In-depth knowledge of network security protocols and technologies" },
+                { item: "Familiarity with regulatory frameworks such as PCI DSS and GDPR" },
+                { item: "Professional certifications such as CISSP or CISM are preferred" }
+            ]
+        },
+        {
+            title: "Risk Analyst",
+            location: "India",
+            department: "Risk Management",
+            about: "As a Risk Analyst at YourBank, you will play a vital role in identifying and assessing potential risks to our organization. You will analyze data, conduct risk assessments, and develop strategies to mitigate risks. We are looking for detail-oriented individuals with strong analytical skills and a solid understanding of risk management principles.",
+            requirements: [
+                { item: "Bachelor's degree in Finance, Economics, or a related field" },
+                { item: "Minimum of 2 years of experience in risk management or a similar role" },
+                { item: "Proficiency in risk analysis tools and techniques" },
+                { item: "Strong analytical and problem-solving skills" },
+                { item: "Knowledge of regulatory requirements and industry best practices" }
+            ]
+        }
+    ];
+
 
     const values = [
         {
@@ -171,158 +173,35 @@ const  [
                 </div>
                 
                 <div className='md:grid grid-cols-2 gap-4 space-y-5'>
-                    <div className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
-                        <div className='space-y-3'>
-                            <h1 className='text-[24px] font-semibold'>Relationship Manager</h1>
-                            <div className='sm:flex space-y-3 sm:space-x-3'>
-                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: India</div>
-
-                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: Retail Banking</div>
-                            </div>
+                  {jobs.map((job, idx) => (
+                    <div key={idx} className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
+                      <div className='space-y-3'>
+                        <h1 className='text-[24px] font-semibold'>{job.title}</h1>
+                        <div className='sm:flex space-y-3 sm:space-x-3'>
+                          <div className='bg-[#1A1A1A] rounded-full w-fit px-2 h-fit border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: {job.location}</div>
+                          <div className='bg-[#1A1A1A] rounded-full w-fit px-2 h-fit border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: {job.department}</div>
                         </div>
-
-                        <div className='space-y-3'>
-                            <h2 className='text-[20px] font-semibold'>About This Job</h2>
-                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.</p>
-                        </div>
-
-                        <div className='space-y-3'>
-                            <h1 className='text-[20px] font-semibold'>Requirements $ Qualifications</h1>
-
-                            <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] text-[#B3B3B3 space-y-3'>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button className='md:text-[16px] text-[14px]  rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
-                            Apply Now
-                        </button>
+                      </div>
+                      <div className='space-y-3'>
+                        <h2 className='text-[20px] font-semibold'>About This Job</h2>
+                        <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>{job.about}</p>
+                      </div>
+                      <div className='space-y-3'> 
+                        <h1 className='text-[20px] font-semibold'>Requirements & Qualifications</h1>
+                        <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] space-y-3'>
+                          {job.requirements.map((req, i) => (
+                            <li key={i} className='flex space-x-2 items-center'>
+                              <AiFillBank size={25} />
+                              <span className='flex flex-wrap'>{req.item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <button className='md:text-[16px] text-[14px] rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
+                        Apply Now
+                      </button>
                     </div>
-
-                    <div className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
-                        <div className='space-y-3'>
-                            <h1 className='text-[24px] font-semibold'>Relationship Manager</h1>
-                            <div className='sm:flex space-y-3 sm:space-x-3'>
-                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: India</div>
-
-                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: Retail Banking</div>
-                            </div>
-                        </div>
-
-                        <div className='space-y-3'>
-                            <h2 className='text-[20px] font-semibold'>About This Job</h2>
-                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.</p>
-                        </div>
-
-                        <div className='space-y-3'>
-                            <h1 className='text-[20px] font-semibold'>Requirements $ Qualifications</h1>
-
-                            <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] text-[#B3B3B3 space-y-3'>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button className='md:text-[16px] text-[14px]  rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
-                            Apply Now
-                        </button>
-                    </div>
-
-                    <div className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
-                        <div className='space-y-3'>
-                            <h1 className='text-[24px] font-semibold'>Relationship Manager</h1>
-                            <div className='sm:flex space-y-3 sm:space-x-3'>
-                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: India</div>
-
-                                <div className='bg-[#1A1A1A] rounded-full w-fit px-2 border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: Retail Banking</div>
-                            </div>
-                        </div>
-
-                        <div className='space-y-3'>
-                            <h2 className='text-[20px] font-semibold'>About This Job</h2>
-                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>As a Relationship Manager at YourBank, you will be responsible for developing and maintaining relationships with our valued customers. You will proactively identify their financial needs and offer tailored solutions to help them achieve their goals. We are seeking individuals with excellent communication skills, a strong sales acumen, and a passion for delivering exceptional customer service.</p>
-                        </div>
-
-                        <div className='space-y-3'>
-                            <h1 className='text-[20px] font-semibold'>Requirements $ Qualifications</h1>
-
-                            <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] text-[#B3B3B3 space-y-3'>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                                <li className='flex space-x-2 items-center'>
-                                    <AiFillBank size={25} />
-                                    <span className='flex flex-wrap'>
-                                        Bachelor's degree in Computer Science, Information Security, or a related field
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button className='md:text-[16px] text-[14px]  rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
-                            Apply Now
-                        </button>
-                    </div>
+                  ))}
                 </div>
             </div>
 
