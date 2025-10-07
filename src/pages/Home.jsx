@@ -198,10 +198,10 @@ const Home = () => {
     <div className='mx-auto' style={{ backgroundImage: `url(${homeAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '50%' }}>
         <Nav />
 
-        <div className='max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col justify-center relative pt-25'>
-            <div className='text-white md:flex md:text-left text-center gap-20 py-16'>
+        <div className='w-full flex flex-col mx-auto items-center relative pt-25'>
+            <div className='text-white md:flex md:text-left text-center gap-20 py-16 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
 
-                <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block' data-aos="fade-up">
+                <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block p-6' data-aos="fade-up">
                     <div className='bg-[#262727] rounded-full px-5 py-2 flex gap-1 items-center justify-center w-fit'>
                         <img src={checkIcon} className='w-7 h-7' alt="checked" />
                         <p className='sm:text-sm text-[12px]'>No LLC Required, No Credit Check</p>
@@ -215,14 +215,14 @@ const Home = () => {
                     <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' >Open Account</button>
                 </div>
               
-                <div className='md:w-[50%] w-[100%]' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}} data-aos="fade-up">
+                <div className='md:w-[50%] w-[100%] p-6' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}} data-aos="fade-up">
                     <div className='w-full'>
                         <img src={Homehero} className='w-full h-full' alt="hero" data-aos="fade-up" data-aos-delay="200" />
                     </div>
                 </div>
             </div>
 
-            <div className='py-16 space-y-8'>
+            <div className='py-16 space-y-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3' data-aos="fade-up">
                         <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Products</b></h1>
@@ -248,28 +248,36 @@ const Home = () => {
 
                 <div className="md:flex text-white gap-2 md:gap-14 space-y-7 md:space-y-0 md:items-stretch px-6 sm:px-8">
                     {data.map((feature, index) => (
-                    <>
-                        <div key={`feature-${toggle}-${index}`} className="space-y-3 px-2 flex flex-col text-center items-center flex-1" data-aos="fade-up" data-aos-delay={index * 100}>
-                            <img src={feature.image} alt="Icon" />
-                            <h1 className="text-xl font-bold">{feature.title}</h1>
-                            <p className="text-sm text-gray-300">{feature.body}</p>
-                        </div>
+                        <React.Fragment key={`feature-${toggle}-${index}`}>
 
-                        {/* line between cards */}
-                        {index < data.length - 1 && (
-                        <>
-                            {/* Vertical line */}
-                            <div className="hidden md:block absolute w-[1px] h-full line-dashed-y" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
-                            {/* Horizontal line */}
-                            <div className="md:hidden absolute h-[1px] w-full line-dashed-x" data-aos="fade-up" data-aos-delay={index * 100 + 50}></div>
-                        </>
-                        )}
-                    </>
+                            <div className="flex px-2">
+                                <div className="space-y-3 flex flex-col text-center items-center pr-4 pb-4 md:pb-0" data-aos="fade-up" data-aos-delay={index * 100}>
+                                    <img src={feature.image} alt="Icon" />
+                                    <h1 className="text-xl font-bold">{feature.title}</h1>
+                                    <p className="text-sm text-gray-300">{feature.body}</p>
+                                </div>
+                            </div>
+
+                            {/* lines */}
+                            {index < data.length - 1 && (
+                                <>
+                                    {/* Desktop vertical lines */}
+                                    <div className="hidden md:flex w-2 items-center justify-center" data-aos="fade-up" data-aos-delay={index * 100 + 50}>
+                                        <div className="w-[1px] h-full line-dashed-y" />
+                                    </div>
+
+                                    {/* Mobile horizontal lines */}
+                                    <div className="md:hidden w-full" data-aos="fade-up" data-aos-delay={index * 100 + 50}>
+                                        <div className="h-[1px] w-full line-dashed-x my-4" />
+                                    </div>
+                                </>
+                            )}
+                        </React.Fragment>
                     ))}
                 </div>
             </div>
 
-            <div className='py-16 space-y-8 text-white'>
+            <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold text-[#CBFE33]'>Use Cases</h1>
                     <p className='text-gray-300 text-sm'>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
@@ -370,7 +378,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='py-16 space-y-8 text-white'>
+            <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold'><b className='text-[#CBFE33]'>Our</b> Features</h1>
                     <p className='text-gray-300 text-sm'>Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>

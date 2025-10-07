@@ -12,7 +12,7 @@ import About from './pages/About.jsx'
 const App = () => {
   return (
     <>
-      <Career />
+      <Home />
     </>
   )
 }
