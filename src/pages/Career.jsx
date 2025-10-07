@@ -174,25 +174,28 @@ const Career = () => {
                     <p className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]'>Explore exciting job openings at YourBank, where we value talent, innovation, and a passion for customer service. Join our team and be part of shaping a brighter future in the banking industry</p>
                 </div>
                 
-                <div className='md:grid grid-cols-2 gap-4 space-y-5'>
+                <div className='md:grid grid-cols-2 gap-4 lg:space-y-0 space-y-5'>
                   {jobs.map((job, idx) => (
                     <div key={idx} className='p-5 lg:p-[40px] rounded-2xl bg-[#1C1C1C] border border-[#262626] space-y-5'>
-                      <div className='space-y-3'>
+                        
+                      <div className='space-y-3' data-aos="fade-up">
                         <h1 className='text-[24px] font-semibold'>{job.title}</h1>
-                        <div className='sm:flex space-y-3 sm:space-x-3'>
+                        <div className='sm:flex space-y-3 md:space-y-0 sm:space-x-3'>
                           <div className='bg-[#1A1A1A] rounded-full w-fit px-2 h-fit border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Location: {job.location}</div>
                           <div className='bg-[#1A1A1A] rounded-full w-fit px-2 h-fit border border-[#262626] md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Department: {job.department}</div>
                         </div>
                       </div>
-                      <div className='space-y-3'>
+
+                      <div className='space-y-3' data-aos="fade-up">
                         <h2 className='text-[20px] font-semibold'>About This Job</h2>
                         <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>{job.about}</p>
                       </div>
+                      
                       <div className='space-y-3'> 
                         <h1 className='text-[20px] font-semibold'>Requirements & Qualifications</h1>
                         <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] space-y-3'>
                           {job.requirements.map((req, i) => (
-                            <li key={i} className='bg-green-700 flex space-x-4 items-center'>
+                            <li key={i} className='flex space-x-4 items-center' data-aos="fade-up">
                               <AiFillBank size={25} className='h-full' />
                               <span className='flex flex-wrap'>{req.item}</span>
                             </li>
