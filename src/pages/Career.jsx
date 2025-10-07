@@ -1,4 +1,5 @@
 import react from 'react'
+import career from '../assets/career-image.png'
 import Value1 from '../assets/value1.png'
 import Value2 from '../assets/value2.png'
 import Value3 from '../assets/value3.png'
@@ -99,13 +100,15 @@ const Career = () => {
         }
     ]
 
+    const heroText = "Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking."
+
   return (
     <div className='flex flex-col items-center'>
         <Nav />
 
-        <div className='xl:w-[1280px] lg:mx-16 lg:px-8 mx-5 flex flex-col justify-center relative pt-25'>
+        <div className='xl:w-[1280px] lg:mx-8 lg:px-8 mx-5 flex flex-col justify-center relative pt-25'>
 
-            <Hero />
+            <Hero start='Welcome to' next='YourBanK' last='Careers' text={heroText} image={career} />
 
             <div className='my-10 space-y-10 text-white'>
                 <div className='text-center lg:text-left space-y-3 xl:max-w-[1000px] lg:max-w-[700px]' data-aos="fade-up">
@@ -123,7 +126,6 @@ const Career = () => {
                     
                 </div>
             </div>
-
 
             <div className='my-10 space-y-10 text-white'>
                 <div className='text-center lg:text-left space-y-3 xl:max-w-[1000px] lg:max-w-[700px]' data-aos="fade-up">
@@ -190,8 +192,8 @@ const Career = () => {
                         <h1 className='text-[20px] font-semibold'>Requirements & Qualifications</h1>
                         <ul className='md:text-[16px] text-[#B3B3B3] text-[14px] font-[300] space-y-3'>
                           {job.requirements.map((req, i) => (
-                            <li key={i} className='flex space-x-2 items-center'>
-                              <AiFillBank size={25} />
+                            <li key={i} className='bg-green-700 flex space-x-4 items-center'>
+                              <AiFillBank size={25} className='h-full' />
                               <span className='flex flex-wrap'>{req.item}</span>
                             </li>
                           ))}
