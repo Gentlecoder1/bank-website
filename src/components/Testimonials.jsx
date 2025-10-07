@@ -125,7 +125,7 @@ const Testimonials = () => {
               <p className='text-gray-300 text-sm'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
             </div>
 
-            <div className={`rounded-full m-auto border-[1px] border-gray-500 flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`}>
+            <div className={`rounded-full m-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`}>
               <div
                 onClick={toggleLeft}
                 className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
@@ -145,7 +145,7 @@ const Testimonials = () => {
           <div className='flex items-center justify-center'>
             <button 
               onClick={goToPrev}
-              className='hidden md:block rounded-full w-fit h-fit border-[1px] border-gray-400 bg-[#353335] p-2 cursor-pointer hover:bg-gray-500 mr-4'
+              className='hidden md:block rounded-full w-fit h-fit border border-[#CBFE33] p-2 cursor-pointer hover:bg-gray-500 mr-4'
             >
               <GoArrowLeft size={20} color='#CBFE33' />
             </button>
@@ -183,7 +183,7 @@ const Testimonials = () => {
 
             <button 
               onClick={goToNext}
-              className='hidden md:block rounded-full w-fit h-fit border-[1px] border-gray-400 bg-[#353335] p-2 cursor-pointer hover:bg-gray-500 ml-4'
+              className='hidden md:block rounded-full w-fit h-fit border border-[#CBFE33] p-2 cursor-pointer hover:bg-gray-500 ml-4'
             >
               <GoArrowRight size={20} color='#CBFE33' />
             </button>
@@ -193,13 +193,13 @@ const Testimonials = () => {
           <div className='flex gap-3 justify-center md:hidden'>
             <button 
               onClick={goToPrev}
-              className='rounded-full bg-[#353335] border-[1px] border-gray-400 p-2 cursor-pointer hover:bg-gray-500'
+              className='rounded-full border border-[#CBFE33] p-2 cursor-pointer hover:bg-gray-500'
             >
               <GoArrowLeft size={20} color='#CBFE33' />
             </button>
             <button 
               onClick={goToNext}
-              className='rounded-full bg-[#353335] border-[1px] border-gray-400 p-2 cursor-pointer hover:bg-gray-500'
+              className='rounded-full border border-[#CBFE33] p-2 cursor-pointer hover:bg-gray-500'
             >
               <GoArrowRight size={20} color='#CBFE33' />
             </button>

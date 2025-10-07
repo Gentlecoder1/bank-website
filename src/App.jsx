@@ -1,19 +1,22 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home.jsx'
 import Career from './pages/Career.jsx'
 import About from './pages/About.jsx'
-// import Nav from './components/nav.jsx'
-// import Footer from './components/Footer.jsx'
-// import OpenAccount from './components/OpenAccount.jsx'
-// import Hero from './components/hero.jsx'
-// import Testimonials from './components/Testimonials.jsx'
-// import Faqs from './components/Faqs.jsx'
+
 
 const App = () => {
   return (
-    <>
-      <Career />
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/Career' element={<Career />} />
+          <Route path='/About' element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

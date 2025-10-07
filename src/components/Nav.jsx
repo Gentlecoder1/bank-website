@@ -30,9 +30,9 @@ const Nav = () => {
                 <h1 className='text-xl'>YourBanK</h1>
             </div>
             <ul className='md:flex gap-5 hidden'>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">Home</a></li>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">Careers</a></li>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">About</a></li>
+                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/home">Home</a></li>
+                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/Career">Careers</a></li>
+                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/About">About</a></li>
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">Security</a></li>
             </ul>
 
@@ -61,9 +61,9 @@ const Nav = () => {
 
         <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0 opacity-0  w-full" : `max-h-96  flex flex-col items-center opacity-100 ${burgerStyle}`}`}>
             <ul className='flex flex-col items-center p-4 space-y-2 '>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="#">Home</a></li>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="#">Careers</a></li>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="#">About</a></li>
+                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/home">Home</a></li>
+                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Career">Careers</a></li>
+                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/About">About</a></li>
                 <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="#">Security</a></li>
             </ul>
 

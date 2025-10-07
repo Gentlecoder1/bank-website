@@ -6,7 +6,7 @@ const hero = (props) => {
     <div className='w-full flex mx-auto justify-center relative my-7'>
         
         <div 
-          data-aos="fade-down"
+          data-aos="fade-up"
           style={{ 
             backgroundImage: `url(${Abstract})`, 
             backgroundRepeat: 'no-repeat', 

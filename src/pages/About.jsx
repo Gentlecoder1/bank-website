@@ -6,6 +6,7 @@ import Press1 from '../assets/press1.png'
 import Press2 from '../assets/press2.png'
 import Press3 from '../assets/press3.png'
 import Press4 from '../assets/press4.png'
+import PressAbstract from '../assets/press-abstract.png'
 import Nav from '../components/Nav.jsx'
 import Hero from '../components/Hero.jsx'
 import Footer from '../components/Footer.jsx'
@@ -66,7 +67,7 @@ const About = () => {
                 <div className='space-y-8'>
 
                     <div className='space-y-5 lg:flex items-center'>
-                        <div className='mx-auto border border-[#262626] border-b-4 border-b-[#CBFE33] lg:border-b lg:border-b-[#262626] px-8 pt-8 rounded-t-[70px] lg:rounded-b-2xl w-fit' data-aos="fade-up">
+                        <div style={{ backgroundImage: `url(${PressAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }} className='mx-auto border border-[#262626] border-b-4 border-b-[#CBFE33] lg:border-b lg:border-b-[#262626] px-8 pt-8 lg:px-10 lg:pt-10 rounded-t-[70px] lg:rounded-b-2xl w-fit' data-aos="fade-up">
                             <img src={Mission1} className='rounded-t-[60px]' alt="" />
                         </div>
 
@@ -77,7 +78,7 @@ const About = () => {
                     </div>
 
                     <div className='space-y-5 lg:flex items-center flex-row-reverse lg:relative -top-30'>
-                        <div className='mx-auto border border-[#262626] border-b-4 border-b-[#CBFE33] lg:border-b lg:border-b-[#262626] px-8 pt-8 rounded-t-[70px] lg:rounded-b-2xl w-fit' data-aos="fade-up">
+                        <div style={{ backgroundImage: `url(${PressAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }} className='mx-auto border border-[#262626] border-b-4 border-b-[#CBFE33] lg:border-b lg:border-b-[#262626] px-8 pt-8 lg:px-10 lg:pt-10 rounded-t-[70px] lg:rounded-b-2xl w-fit' data-aos="fade-up">
                             <img src={Mission2} className='rounded-t-[60px]' alt="" />
                         </div>
 

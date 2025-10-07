@@ -72,19 +72,19 @@ const Faqs = () => {
                     {frequentlys.slice(0, visible).map((frequently, index) => (
                         <div 
                             key={`faq-${visible}-${index}`}
-                            className='space-y-4 border border-gray-600 rounded-lg p-6 transform transition-all duration-300 hover:scale-105'
+                            className='space-y-4 border border-[#262626] rounded-lg p-6 transform transition-all duration-300 hover:scale-105'
                             data-aos="fade-up" 
                             data-aos-delay={index * 100}
                         >
                             <h1 className='font-bold text-center flex justify-center '>{frequently.question}</h1>
-                            <hr className='w-full h-[0.1px] bg-gray-600 border-0' />
+                            <div className="h-[1px] w-full border border-[#262626]" />
                             <p className='text-sm text-gray-300 leading-relaxed flex-grow flex items-center justify-center text-center px-2'>{frequently.answer}</p>
                         </div>
                     ))}
                     
                 </div>
 
-                <button className='text-sm flex items-center gap-2 font-bold border border-gray-600 rounded-full py-2 px-4 mt-6 mx-auto hover:bg-[#CBFE33] hover:text-black transition-all duration-300 transform hover:scale-105' onClick={show} data-aos="fade-up">{less ? "Load All" :" Load less"}
+                <button className='text-sm flex items-center gap-2 font-bold border border-[#262626] rounded-full py-2 px-4 mt-6 mx-auto hover:bg-[#CBFE33] hover:text-black transition-all duration-300 transform hover:scale-105' onClick={show} data-aos="fade-up">{less ? "Load All" :" Load less"}
                     <div className={`transition-transform duration-300 ${less ? 'rotate-180' : 'rotate-0'}`}>
                         <GoChevronDown size={20} />
                     </div>

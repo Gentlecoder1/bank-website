@@ -39,15 +39,18 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <hr className='h-[0.1px] bg-gray-400 border-0 mb-6' />
+            <div className="h-[1px] w-full border border-[#262626] mb-6" />
             
             <div className='flex space-x-7 space-y-5 sm:space-y-0 flex-wrap items-center justify-center text-white text-md' data-aos="fade-up">
                 <p className='flex items-center gap-2' data-aos="fade-up"><CiMail size={20} /> hello@skillbirdge.com</p>
                 <p className='flex items-center gap-2' data-aos="fade-up"><FaPhoneAlt />  +91813232309</p>
                 <p className='flex items-center gap-2' data-aos="fade-up"><FaMapMarkerAlt /> Somewhere in the World</p>
             </div>
-            <hr className='h-[0.1px] bg-gray-400 border-0 mt-6 mb-3' />
-            <div className='md:flex justify-between border-[1px] border-gray-400 mt-7 md:p-2 p-5 place-items-center md:rounded-full rounded-2xl'>
+            
+            <div className="h-[1px] w-full border border-[#262626] mt-6 mb-3" />
+
+
+            <div className='md:flex justify-between border border-[#262626] mt-7 md:p-2 p-5 place-items-center md:rounded-full rounded-2xl'>
                 <div className='flex relative gap-2 md:-top-0 -top-10 w-fit' data-aos="fade-up">
                     <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialFacebook size={25} /></div>
                     <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialTwitter size={25} /></div>
