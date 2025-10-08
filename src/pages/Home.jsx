@@ -45,7 +45,7 @@ const Home = () => {
   // Refresh AOS when toggle state changes
   useEffect(() => {
     setTimeout(() => {
-      Aos.refresh();
+      Aos.refreshHard();
     }, 100);
   }, [toggle])
 
@@ -231,7 +231,7 @@ const Home = () => {
                         <p className='text-gray-300 text-sm'>Experience a host of powerful features of YourBanK, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                     </div>
 
-                    <div className={`rounded-full m-auto border border-[#262626] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
+                    <div className={`rounded-full m-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
                         <div
                             onClick={() => setToggle(0)}
                             className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
@@ -390,11 +390,11 @@ const Home = () => {
 
                 <div className='lg:flex gap-6 space-y-4 px-6 sm:px-8'>
                     <div className='lg::w-[20%] p-6 lg:p-7 xl:p-10 bg-[#1D1C1D] rounded-2xl flex lg:flex-col sm:justify-center whitespace-nowrap overflow-auto scrollbar-hide space-x-5 lg:space-y-5 h-fit'>
-                        <div onClick={() => setClick(0)} className={`text-center w-full border-2 cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Online Banking</div>
+                        <div onClick={() => setClick(0)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Online Banking</div>
 
-                        <div onClick={() => setClick(1)} className={`text-center w-full border-2 cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Financial Tools</div>
+                        <div onClick={() => setClick(1)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Financial Tools</div>
 
-                        <div onClick={() => setClick(2)} className={`text-center w-full border-2 cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Customer Support</div>
+                        <div onClick={() => setClick(2)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Customer Support</div>
                     </div>
 
                     <div className='lg:grid grid-cols-2 gap-5 lg:w-[80%] space-y-5 lg:space-y-0'>
