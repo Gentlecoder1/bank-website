@@ -222,7 +222,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
             {/* product */}
             <div className='py-16 space-y-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
@@ -277,8 +276,7 @@ const Home = () => {
                         </React.Fragment>
                     ))}
                 </div>
-            </div>
-
+                </div>
             {/* use cases */}
             <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left space-y-3 px-6 sm:px-8' data-aos="fade-up">
@@ -379,8 +377,7 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-            </div>
-
+                </div>
             {/* features */}
             <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3 px-6 sm:px-8' data-aos="fade-up">
