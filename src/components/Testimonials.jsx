@@ -14,28 +14,28 @@ const Testimonials = () => {
   const [slidesToShow, setSlidesToShow] = useState(3)
   const sliderRef = useRef(null);
 
-  // useEffect(() => {
-  //   Aos.init({
-  //     duration: 800,
-  //     easing: 'ease-in-out',
-  //     once: false,
-  //     mirror: false,
-  //     offset: 50,
-  //     delay: 0,
-  //     disable: false,
-  //     startEvent: 'DOMContentLoaded'
-  //   });
-  // }, [])
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: false,
+      offset: 50,
+      delay: 0,
+      disable: false,
+      startEvent: 'DOMContentLoaded'
+    });
+  }, [])
 
-  // // Refresh AOS when toggle state changes
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     if (typeof Aos !== 'undefined') {
-  //       Aos.refresh();
-  //     }
-  //   }, 300);
-  //   return () => clearTimeout(timer);
-  // }, [toggle])
+  // Refresh AOS when toggle state changes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (typeof Aos !== 'undefined') {
+        Aos.refresh();
+      }
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [toggle])
 
   // Custom hook to detect screen size
   useEffect(() => {
@@ -120,7 +120,7 @@ const Testimonials = () => {
     <div className='w-full flex mx-auto justify-center relative my-7'>
         <div className='text-white xl:w-[1280px] lg:w-full md:w-full w-full lg:mx-16 mx-5 p-6'>
           <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center'>
-            <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
+            <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3' data-aos="fade-up">
               <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Testimonials</b></h1>
               <p className='text-gray-300 text-sm'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
             </div>
@@ -152,12 +152,12 @@ const Testimonials = () => {
 
             <div className='mt-8 mb-6 text-sm relative w-full max-w-6xl mx-auto overflow-hidden'>
               {/* Fade overlay for left and right edges - Equal fade width */}
-              <div className='absolute inset-0 pointer-events-none z-10 [background:linear-gradient(to_right,#191919_0%,transparent_25%,transparent_75%,#191919_100%)]'></div>
+              <div className='absolute inset-0 pointer-events-none z-10 [background:linear-gradient(to_right,#191919_0%,transparent_30%,transparent_70%,#191919_100%)]'></div>
 
               <div className='slider-container'>
                 <Slider ref={sliderRef} {...settings}>
                   {testimonials.map((testimonial, index) => (
-                    <div key={index} className='px-4 h-full'>
+                    <div key={index} className='px-4 h-full' data-aos="fade-up">
                       <div className={`testimonial-card h-[320px] w-full p-5 text-center border border-gray-500 md:border-0 rounded-xl bg-[#191919] flex flex-col justify-between ${
                         slidesToShow === 1 ? 'md:max-w-full max-w-[500px] mx-auto' : 'mx-2'
                       }`}>
@@ -190,7 +190,7 @@ const Testimonials = () => {
           </div>
 
           {/* mobile view buttons */}
-          <div className='flex gap-3 justify-center md:hidden'>
+          <div className='flex gap-3 justify-center md:hidden' data-aos="fade-up">
             <button 
               onClick={goToPrev}
               className='rounded-full border border-[#CBFE33] p-2 cursor-pointer hover:bg-gray-500'
