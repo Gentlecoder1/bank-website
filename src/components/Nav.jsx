@@ -33,7 +33,7 @@ const Nav = () => {
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/home">Home</a></li>
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/Career">Careers</a></li>
                 <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/About">About</a></li>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="#">Security</a></li>
+                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/Security">Security</a></li>
             </ul>
 
             <div className={`hidden md:flex space-x-8 md:space-x-2`}>
@@ -64,7 +64,7 @@ const Nav = () => {
                 <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/home">Home</a></li>
                 <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Career">Careers</a></li>
                 <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/About">About</a></li>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="#">Security</a></li>
+                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Security">Security</a></li>
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>

@@ -200,7 +200,7 @@ const Home = () => {
 
         <div className='w-full flex flex-col mx-auto items-center relative pt-25'>
             {/* hero */}
-            <div className='text-white md:flex md:text-left text-center gap-20 py-16 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
+            <div className='text-white md:flex md:text-left text-center gap-20 py-8 mb-4 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
 
                 <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block p-6' data-aos="fade-up">
                     <div className='bg-[#262727] rounded-full px-5 py-2 flex gap-1 items-center justify-center w-fit'>
@@ -212,8 +212,9 @@ const Home = () => {
                         <h1 className='mb-3 text-3xl sm:text-4xl font-bold'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
                         <p className='mb-3'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
                     </div>
-        
-                    <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' >Open Account</button>
+                    <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                        <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' data-aos="fade-up">Open Account</button>
+                    </div>
                 </div>
               
                 <div className='md:w-[50%] w-[100%] p-6' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}} data-aos="fade-up">
@@ -276,9 +277,10 @@ const Home = () => {
                         </React.Fragment>
                     ))}
                 </div>
-                </div>
+            </div>
+
             {/* use cases */}
-            <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
+            <div className='py-6 mb-4 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold text-[#CBFE33]'>Use Cases</h1>
                     <p className='text-gray-300 text-sm'>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
@@ -324,10 +326,12 @@ const Home = () => {
                                 <p className='text-gray-300 text-sm'>Reducing financial burdens</p>
                             </div>
                         </div>
-
-                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
+                        
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                            <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
                             Load more
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -372,12 +376,15 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
-                            Load more
-                        </button>
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                            <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
+                                Load more
+                            </button>
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
+
             {/* features */}
             <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3 px-6 sm:px-8' data-aos="fade-up">
@@ -387,21 +394,30 @@ const Home = () => {
 
                 <div className='lg:flex gap-6 space-y-4 px-6 sm:px-8'>
                     <div className='lg::w-[20%] p-6 lg:p-7 xl:p-10 bg-[#1D1C1D] rounded-2xl flex lg:flex-col sm:justify-center whitespace-nowrap overflow-auto scrollbar-hide space-x-5 lg:space-y-5 h-fit'>
-                        <div onClick={() => setClick(0)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Online Banking</div>
+                        
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-full'>
+                            <div onClick={() => setClick(0)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 ${click === 0 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Online Banking</div>
+                        </div>    
 
-                        <div onClick={() => setClick(1)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Financial Tools</div>
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-full'>
+                            <div onClick={() => setClick(1)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 ${click === 1 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Financial Tools</div>
+                        </div>    
 
-                        <div onClick={() => setClick(2)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 transition-all duration-300 transform hover:scale-105 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Customer Support</div>
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-full'>
+                            <div onClick={() => setClick(2)} className={`text-center w-full border cursor-pointer rounded-full text-sm px-3 py-2 ${click === 2 ? 'border-[#CBFE33] text-[#CBFE33]' : 'border-gray-400'}`} data-aos="fade-up">Customer Support</div>
+                        </div>    
                     </div>
 
                     <div className='lg:grid grid-cols-2 gap-5 lg:w-[80%] space-y-5 lg:space-y-0'>
                         {datum.map((service, index) => (
-                            <div key={`service-${click}-${index}`} className='bg-[#1D1C1D] rounded-xl p-8 space-y-6 transition-all duration-300 transform hover:scale-105' data-aos="fade-up" data-aos-delay={index * 100}>
-                                <div className='flex justify-between items-center' data-aos="fade-up">
-                                    <h1 className='font-bold'>{service.title}</h1>
-                                    <GoArrowUpRight size={20} color='#CBFE33' />
+                            <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                                <div key={`service-${click}-${index}`} className='bg-[#1D1C1D] rounded-xl p-8 space-y-6' data-aos="fade-up" data-aos-delay={index * 100}>
+                                    <div className='flex justify-between items-center' data-aos="fade-up">
+                                        <h1 className='font-bold'>{service.title}</h1>
+                                        <GoArrowUpRight size={20} color='#CBFE33' />
+                                    </div>
+                                    <p className='text-gray-300 text-sm' data-aos="fade-up">{service.text}</p>
                                 </div>
-                                <p className='text-gray-300 text-sm' data-aos="fade-up">{service.text}</p>
                             </div>
                         ))}
                         
