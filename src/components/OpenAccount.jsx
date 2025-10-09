@@ -25,7 +25,9 @@ const OpenAccount = () => {
                 <p className='mb-3'>Lorem ipsum dolor sit amet consectetur. Blandit odio semper risus pellentesque elit. Pellentesque eget ut imperdiet nulla penatibus. Nascetur viverra arcu sed amet cursus purus.</p>
             </div>
 
-            <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-2xl rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' data-aos="fade-up" data-aos-delay="200">Open Account</button>
+            <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                        <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' data-aos="fade-up">Open Account</button>
+                    </div>
         </div>
     </div>
   )
