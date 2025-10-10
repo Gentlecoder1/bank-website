@@ -1,6 +1,6 @@
 import React from 'react'
 import SignUpbg from '../assets/SignUp-bg.png'
-import Abstract2 from '../assets/Abstract2.png'
+import SignAbstract from '../assets/signAbstract.png'
 import Google from '../assets/google.png'
 import Facebook from '../assets/facebook.png'
 import Apple from '../assets/apple.png'
@@ -13,8 +13,8 @@ const SignUp = () => {
     <div className='mx-auto'>
         <Nav />
         <div className='pt-40 lg:pt-30 px-5 '>
-            <div className='mx-auto relative rounded-xl xl:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${SignUpbg})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%', backgroundColor: '#1C1C1C' }} data-aos="fade-up">
-                <div className='flex rounded-xl justify-center items-center px-[2rem] md:px-[5rem] py-[3rem]' style={{ backgroundImage: `url(${Abstract2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}}>
+            <div className='mx-auto relative rounded-xl lg:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${SignUpbg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent'}}>
+                <div className='flex justify-center items-center px-[2rem] md:px-[5rem] py-[3rem]' style={{ backgroundImage: `url(${SignAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top'}}>
                     <div className='w-full'>
                         <div className='text-center space-y-3' data-aos="fade-up">
                             <h1 className='text-4xl font-bold text-[#CAFE33]'>Sign Up </h1>

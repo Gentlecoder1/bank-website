@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
 
-    const burgerStyle = "md:hidden mx-5 -mt-6 p-4 w-full mt-4 ease-in-out duration-500 rounded-2xl text-white bg-[#1D1C1D] shadow-md shadow-[#969b86] items-center"
+    const burgerStyle = "md:hidden mx-5 -mt-6 p-4 w-full mt-4 ease-in-out duration-500 rounded-2xl text-white bg-[#1D1C1D]/70 backdrop-blur-md shadow-md shadow-[#969b86] items-center max-h-96 flex flex-col"
 
     const [burger, setBurger] = useState(false)
 
@@ -23,8 +23,10 @@ const Nav = () => {
     }
 
   return (
-    <header className='fixed w-full z-100 flex flex-col items-center opacity-95 xl:px-16 px-5'>
-        <div className='xl:w-[1280px] lg:w-full md:w-full w-full lg:px-16 px-5 text-white bg-[#1D1C1D] shadow-lg shadow-[#969b86] lg:my-5 mt-10 flex justify-between md:py-4 py-4 rounded-[70px] items-center'>
+    <header className='fixed w-full z-100 flex flex-col items-center xl:px-16 px-5'>
+        <div
+            className='xl:w-[1280px] lg:w-full md:w-full w-full lg:px-16 px-5 text-white bg-[#1D1C1D]/70 backdrop-blur-md shadow-lg shadow-[#969b86] lg:my-5 mt-10 flex justify-between md:py-4 py-4 rounded-[70px] items-center'
+        >
             <div className='flex items-center'>
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
                 <h1 className='text-xl'>YourBanK</h1>
@@ -59,12 +61,12 @@ const Nav = () => {
             </div>
         </div>
 
-        <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0 opacity-0  w-full" : `max-h-96  flex flex-col items-center opacity-100 ${burgerStyle}`}`}>
-            <ul className='flex flex-col items-center p-4 space-y-2 '>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/home">Home</a></li>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Career">Careers</a></li>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/About">About</a></li>
-                <li className='bg-[#262727] w-fit py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Security">Security</a></li>
+        <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`} >
+            <ul className='flex flex-col items-center p-4 space-y-4 '>
+                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/home">Home</a></li>
+                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Career">Careers</a></li>
+                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/About">About</a></li>
+                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Security">Security</a></li>
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>
