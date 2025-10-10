@@ -226,13 +226,13 @@ const Home = () => {
             
             {/* product */}
             <div className='py-8 mb-10 space-y-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
-                <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
+                <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between items-center md:text-left text-center text-white'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3' data-aos="fade-up">
                         <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Products</b></h1>
                         <p className='mb-3 md:text-[17px] text-[15px] font-[300] text-[#B3B3B3]'>Experience a host of powerful features of YourBanK, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                     </div>
 
-                    <div className={`rounded-full m-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
+                    <div className={`rounded-full mx-auto md:mx-0 md:ml-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
                         <div
                             onClick={() => setToggle(0)}
                             className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}

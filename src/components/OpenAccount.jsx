@@ -25,7 +25,7 @@ const OpenAccount = () => {
                 <p className='mb-3 md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Lorem ipsum dolor sit amet consectetur. Blandit odio semper risus pellentesque elit. Pellentesque eget ut imperdiet nulla penatibus. Nascetur viverra arcu sed amet cursus purus.</p>
             </div>
 
-            <div className='transition-all duration-300 transform hover:scale-105 flex items-center mx-auto mt-3 md:mt-0 w-fit'>
+            <div className='transition-all duration-300 transform hover:scale-105 flex items-center mx-auto md:mx-0 md:ml-auto mt-3 md:mt-0 w-fit'>
                 <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 transition-all duration-300 transform hover:scale-105' data-aos="fade-up">Open Account</button>
             </div>
         </div>
