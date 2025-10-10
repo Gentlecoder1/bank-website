@@ -14,10 +14,10 @@ const Login = () => {
     <div className='mx-auto'>
         <Nav />
         <div className='pt-40 lg:pt-30 px-5 '>
-            <div className='mx-auto relative rounded-xl lg:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${SignUpbg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent'}}>
+            <div data-aos="fade-up" className='mx-auto relative rounded-xl lg:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${SignUpbg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent'}}>
                 <div className='flex justify-center items-center px-[2rem] md:px-[5rem] py-[3rem]' style={{ backgroundImage: `url(${SignAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top'}}>
                     <div className='w-full'>
-                        <div className='text-center space-y-3'>
+                        <div className='text-center space-y-3' data-aos="fade-up">
                             <h1 className='text-4xl font-bold text-[#CAFE33]'>Login</h1>
                             <p className='text-center md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Welcome back! Please log in to access your account.</p>
                         </div>

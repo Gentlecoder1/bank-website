@@ -13,14 +13,17 @@ const Nav = () => {
         setBurger(!burger)
     }
 
-    const [toggle, setToggle] = useState(0)
 
-    const toggleLeft = () => {
-        setToggle(0)
-    }
-    const toggleRight = () => {
-        setToggle(1)
-    }
+
+  // derive active link from current pathname so direct navigation highlights the correct toggle
+  const pathname = typeof window !== 'undefined' ? window.location.pathname.toLowerCase() : ''
+  const isHomeActive = pathname.includes('/home')
+  const isCareerActive = pathname.includes('/career')
+  const isAboutActive = pathname.includes('/about')
+  const isSecurityActive = pathname.includes('/security')
+
+  const isSignUpActive = pathname.includes('/signup')
+  const isLoginActive = pathname.includes('/login')
 
   return (
     <header className='fixed w-full z-100 flex flex-col items-center xl:px-16 px-5'>
@@ -31,24 +34,22 @@ const Nav = () => {
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
                 <h1 className='text-xl'>YourBanK</h1>
             </div>
-            <ul className='md:flex gap-5 hidden'>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/home">Home</a></li>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/Career">Careers</a></li>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/About">About</a></li>
-                <li className='bg-[#262727] py-2 px-3 rounded-3xl'><a href="/Security">Security</a></li>
+            <ul className='md:flex gap-5 hidden items-center'>
+                <li className={`${isHomeActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/home">Home</a></li>
+                <li className={`${isCareerActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/Career">Careers</a></li>
+                <li className={`${isAboutActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/About">About</a></li>
+                <li className={`${isSecurityActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/Security">Security</a></li>
             </ul>
 
             <div className={`hidden md:flex space-x-8 md:space-x-2`}>
               <div
-                onClick={(toggleLeft)}
-                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isSignUpActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
                 <a href="/SignUp">Sign Up</a>
               </div>
 
               <div
-                onClick={(toggleRight)}
-                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isLoginActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
                 <a href="/Login">Login</a>
               </div>
@@ -63,18 +64,17 @@ const Nav = () => {
 
         <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`} >
             <ul className='flex flex-col items-center p-4 space-y-4 '>
-                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/home">Home</a></li>
-                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Career">Careers</a></li>
-                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/About">About</a></li>
-                <li className='bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl'  data-aos="fade-right"><a href="/Security">Security</a></li>
+                <li className={`${isHomeActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/home">Home</a></li>
+                <li className={`${isCareerActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Career">Careers</a></li>
+                <li className={`${isAboutActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/About">About</a></li>
+                <li className={`${isSecurityActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Security">Security</a></li>
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>
               
               <a href="/SignUp">
                 <div
-                  onClick={(toggleLeft)}
-                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${isSignUpActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
                 >
                   Sign Up
                 </div>
@@ -82,8 +82,7 @@ const Nav = () => {
 
               <a href="/Login">
                 <div
-                  onClick={(toggleRight)}
-                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${isLoginActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
                 >
                   Login
                 </div>
