@@ -64,22 +64,22 @@ const Faqs = () => {
                 <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center mb-8'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3'>
                         <h1 className='text-3xl font-bold' data-aos="fade-up"><b className='text-[#CBFE33]'>Frequently</b> Asked Questions</h1>
-                        <p className='text-gray-300 text-sm' data-aos="fade-up">Still you have any questions? Contact our Team via <a className='text-[#CBFE33]' href="@">support@yourbank.com</a></p>
+                        <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]' data-aos="fade-up">Still you have any questions? Contact our Team via <a className='text-[#CBFE33]' href="#">support@yourbank.com</a></p>
                     </div>
                 </div>
 
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-6 transition-all duration-500'>
                     {frequentlys.slice(0, visible).map((frequently, index) => (
-                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center h-full w-full'>
                             <div 
                                 key={`faq-${visible}-${index}`}
-                                className='space-y-4 border border-[#262626] rounded-lg p-6'
+                                className='space-y-4 border border-[#262626] rounded-lg p-6 h-full w-full'
                                 data-aos="fade-up" 
                                 data-aos-delay={index * 100}
                             >
                                 <h1 className='font-bold text-center flex justify-center '>{frequently.question}</h1>
                                 <div className="h-[1px] w-full border border-[#262626]" />
-                                <p className='text-sm text-gray-300 leading-relaxed flex-grow flex items-center justify-center text-center px-2'>{frequently.answer}</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3] leading-relaxed flex-grow flex items-center justify-center text-center px-2'>{frequently.answer}</p>
                             </div>
                         </div>
                     ))}

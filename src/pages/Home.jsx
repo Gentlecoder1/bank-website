@@ -200,7 +200,7 @@ const Home = () => {
 
         <div className='w-full flex flex-col mx-auto items-center relative pt-25'>
             {/* hero */}
-            <div className='text-white md:flex md:text-left text-center gap-20 py-8 mb-4 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
+            <div className='text-white md:flex md:text-left text-center gap-20 py-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
 
                 <div className='space-y-4 md:space-y-14 w-[100%] md:w-[50%] mb-20 flex flex-col items-center md:block p-6' data-aos="fade-up">
                     <div className='bg-[#262727] rounded-full px-5 py-2 flex gap-1 items-center justify-center w-fit'>
@@ -209,8 +209,8 @@ const Home = () => {
                     </div>
 
                     <div className='space-y-3'>
-                        <h1 className='mb-3 text-3xl sm:text-4xl font-bold'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
-                        <p className='mb-3'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
+                        <h1 className='mb-3 text-2xl sm:text-3xl lg:text-4xl font-[500]'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
+                        <p className='mb-3 md:text-[18px] text-[16px] font-[300] text-[#B3B3B3]'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
                     </div>
                     <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
                         <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' data-aos="fade-up">Open Account</button>
@@ -225,11 +225,11 @@ const Home = () => {
             </div>
             
             {/* product */}
-            <div className='py-16 space-y-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
+            <div className='py-8 mb-10 space-y-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-10 md:flex justify-between md:text-left text-center text-white'>
                     <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3' data-aos="fade-up">
                         <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Products</b></h1>
-                        <p className='text-gray-300 text-sm'>Experience a host of powerful features of YourBanK, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
+                        <p className='mb-3 md:text-[17px] text-[15px] font-[300] text-[#B3B3B3]'>Experience a host of powerful features of YourBanK, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                     </div>
 
                     <div className={`rounded-full m-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
@@ -257,7 +257,7 @@ const Home = () => {
                                 <div className="space-y-3 flex flex-col text-center items-center pr-4 pb-4 md:pb-0" data-aos="fade-up" data-aos-delay={index * 100}>
                                     <img src={feature.image} alt="Icon" />
                                     <h1 className="text-xl font-bold">{feature.title}</h1>
-                                    <p className="text-sm text-gray-300">{feature.body}</p>
+                                    <p className="mb-3 md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]">{feature.body}</p>
                                 </div>
                             </div>
 
@@ -284,7 +284,7 @@ const Home = () => {
             <div className='py-6 mb-4 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold text-[#CBFE33]'>Use Cases</h1>
-                    <p className='text-gray-300 text-sm'>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
+                    <p className='md:text-[18px] text-[16px] font-[300] text-[#B3B3B3]'>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
                 </div>
                 
                 <div className='lg:flex lg:gap-16 px-6 sm:px-8'>
@@ -292,7 +292,7 @@ const Home = () => {
                         {individualCases.map((individual) => (
                             <div className='flex flex-col items-center justify-center rounded-xl p-4 border border-[#262626] bg-[#1D1C1D]' data-aos="fade-up">
                                 <img src={individual.image} alt="" />
-                                <p className='text-center'>{individual.text}</p>
+                                <p className='text-center md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>{individual.text}</p>
                             </div>
                         ))}
                     </div>
@@ -300,13 +300,13 @@ const Home = () => {
                     <div className='lg:w-[50%] mt-10 lg:mt-0 flex flex-col items-center lg:block space-y-2'>
                         <div className='space-y-3 text-center lg:text-left' data-aos="fade-up">
                             <h1 className='text-xl font-bold'>For Individuals</h1>
-                            <p className='text-gray-300 text-sm'>For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers</p>
+                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers</p>
                         </div>
 
                         <div className='lg:flex space-y-2 p-6'>
                             <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>78%</h1>
-                                <p className='text-gray-300 text-sm'>Secure Retirement Planning</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Secure Retirement Planning</p>
                             </div>
 
                             <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
@@ -315,7 +315,7 @@ const Home = () => {
 
                             <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>63%</h1>
-                                <p className='text-gray-300 text-sm'>Manageable Debt Consolidation</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Manageable Debt Consolidation</p>
                             </div>
 
                             <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
@@ -324,7 +324,7 @@ const Home = () => {
 
                             <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>91%</h1>
-                                <p className='text-gray-300 text-sm'>Reducing financial burdens</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Reducing financial burdens</p>
                             </div>
                         </div>
                         
@@ -341,7 +341,7 @@ const Home = () => {
                         {businessCases.map((business) => (
                             <div className='flex flex-col items-center justify-center rounded-xl p-4 border border-[#262626] bg-[#1D1C1D]' data-aos="fade-up">
                                 <img src={business.image} alt="" />
-                                <p className='text-center'>{business.text}</p>
+                                <p className='text-center md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>{business.text}</p>
                             </div>
                         ))}
                     </div>
@@ -349,13 +349,13 @@ const Home = () => {
                     <div className='lg:w-[50%] mt-10 lg:mt-0 flex flex-col items-center lg:block space-y-2'>
                         <div className='space-y-3 text-center lg:text-left' >
                             <h1 className='text-xl font-bold' data-aos="fade-up">For Business</h1>
-                            <p className='text-gray-300 text-sm' data-aos="fade-up"> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
+                            <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]' data-aos="fade-up"> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
                         </div>
 
                         <div className='lg:flex space-y-2 p-6'>
                             <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>65%</h1>
-                                <p className='text-gray-300 text-sm'>Cash Flow Management</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Cash Flow Management</p>
                             </div>
 
                             <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
@@ -364,7 +364,7 @@ const Home = () => {
 
                             <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>70%</h1>
-                                <p className='text-gray-300 text-sm'>Drive Business Expansion</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Drive Business Expansion</p>
                             </div>
 
                             <div className="w-full h-[1px] bg-gray-400 opacity-45 md:hidden" data-aos="fade-up"></div>
@@ -373,7 +373,7 @@ const Home = () => {
 
                             <div className='text-center space-y-2 p-6' data-aos="fade-up">
                                 <h1 className='text-4xl font-bold text-[#CBFE33]'>45%</h1>
-                                <p className='text-gray-300 text-sm'>Streamline payroll processing</p>
+                                <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Streamline payroll processing</p>
                             </div>
                         </div>
 
@@ -390,7 +390,7 @@ const Home = () => {
             <div className='py-16 space-y-8 text-white xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='text-center lg:text-left xl:max-w-[700px] lg:max-w-[500px] space-y-3 px-6 sm:px-8' data-aos="fade-up">
                     <h1 className='text-3xl font-bold'><b className='text-[#CBFE33]'>Our</b> Features</h1>
-                    <p className='text-gray-300 text-sm'>Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
+                    <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience</p>
                 </div>
 
                 <div className='lg:flex gap-6 space-y-4 px-6 sm:px-8'>
@@ -411,13 +411,13 @@ const Home = () => {
 
                     <div className='lg:grid grid-cols-2 gap-5 lg:w-[80%] space-y-5 lg:space-y-0'>
                         {datum.map((service, index) => (
-                            <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
-                                <div key={`service-${click}-${index}`} className='bg-[#1D1C1D] rounded-xl p-8 space-y-6' data-aos="fade-up" data-aos-delay={index * 100}>
+                            <div className='transition-all duration-300 transform hover:scale-105 flex items-center'>
+                                <div key={`service-${click}-${index}`} className='bg-[#1D1C1D] rounded-xl p-8 space-y-6 h-full' data-aos="fade-up" data-aos-delay={index * 100}>
                                     <div className='flex justify-between items-center' data-aos="fade-up">
                                         <h1 className='font-bold'>{service.title}</h1>
                                         <GoArrowUpRight size={20} color='#CBFE33' />
                                     </div>
-                                    <p className='text-gray-300 text-sm' data-aos="fade-up">{service.text}</p>
+                                    <p className='md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]' data-aos="fade-up">{service.text}</p>
                                 </div>
                             </div>
                         ))}

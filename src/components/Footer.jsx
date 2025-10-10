@@ -51,7 +51,7 @@ const Footer = () => {
 
 
             <div className='md:flex justify-between border border-[#262626] mt-7 md:p-2 p-5 place-items-center md:rounded-full rounded-2xl'>
-                <div className='flex relative gap-2 md:-top-0 -top-10 w-fit' data-aos="fade-up">
+                <div className='flex relative gap-2 md:-top-0 -top-10 w-fit'>
                     <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialFacebook size={25} /></div>
                     <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialTwitter size={25} /></div>
                     <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialLinkedin size={25} /></div>
