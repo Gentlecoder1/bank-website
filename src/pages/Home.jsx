@@ -21,9 +21,9 @@ import Case7 from '../assets/case7.png'
 import Case8 from '../assets/case8.png'
 import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 import OpenAccount from '../components/OpenAccount.jsx'
 import Faqs from '../components/Faqs.jsx'
-import Testimonials from '../components/Testimonials.jsx'
 
 const Home = () => {
 

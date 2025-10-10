@@ -41,14 +41,14 @@ const Nav = () => {
                 onClick={(toggleLeft)}
                 className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
-                <a href="#">Sign Up</a>
+                <a href="/SignUp">Sign Up</a>
               </div>
 
               <div
                 onClick={(toggleRight)}
                 className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
-                <a href="#">Login</a>
+                <a href="/Login">Login</a>
               </div>
             </div>
 
@@ -68,21 +68,24 @@ const Nav = () => {
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>
-              <div
-                data-aos="fade-right"
-                onClick={(toggleLeft)}
-                className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
-              >
-                <a href="#">Sign Up</a>
-              </div>
+              
+              <a href="/SignUp">
+                <div
+                  onClick={(toggleLeft)}
+                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                >
+                  Sign Up
+                </div>
+              </a>
 
-              <div
-                data-aos="fade-left"
-                onClick={(toggleRight)}
-                className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
-              >
-                <a href="#">Login</a>
-              </div>
+              <a href="/Login">
+                <div
+                  onClick={(toggleRight)}
+                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                >
+                  Login
+                </div>
+              </a>
             </div>
         </div>
     </header>
