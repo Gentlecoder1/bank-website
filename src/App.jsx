@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/home.jsx'
+import Home from './pages/Home.jsx'
 import Career from './pages/Career.jsx'
 import About from './pages/About.jsx'
 import Security from './pages/Security.jsx'
