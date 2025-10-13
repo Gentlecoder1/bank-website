@@ -212,9 +212,9 @@ const Home = () => {
                         <h1 className='mb-3 text-2xl sm:text-3xl lg:text-4xl font-[500]'>Welcome to YourBanK Empowering Your <b className='text-[#CBFE33]'>Financial Journey</b></h1>
                         <p className='mb-3 md:text-[18px] text-[16px] font-[300] text-[#B3B3B3]'>A YourBanK, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
                     </div>
-                    <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
-                        <button className='bg-[#CBFE33] w-fit h-fit text-black md:rounded-full rounded-full px-4 py-2 mt-3 transition-all duration-300 transform hover:scale-105' data-aos="fade-up">Open Account</button>
-                    </div>
+                    <a className='transition-all duration-300 transform hover:scale-105 flex items-center mx-auto md:mx-0 mt-3 md:mt-0 w-fit'href="/SignUp">
+                        <button className='bg-[#CBFE33] w-fit h-fit text-black rounded-full px-4 py-2 transition-all duration-300 transform hover:scale-105' data-aos="fade-up">Open Account</button>
+                    </a>
                 </div>
               
                 <div className='md:w-[50%] w-[100%] p-6' style={{ backgroundImage: `url(${home2Abstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', backgroundSize: '50%'}} data-aos="fade-up">
