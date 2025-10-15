@@ -64,7 +64,7 @@ const Nav = () => {
 
         <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`} >
             <ul className='flex flex-col items-center p-4 space-y-4 '>
-                <li className={`${isHomeActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/home">Home</a></li>
+                <li className={`${isHomeActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Home">Home</a></li>
                 <li className={`${isCareerActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Career">Careers</a></li>
                 <li className={`${isAboutActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/About">About</a></li>
                 <li className={`${isSecurityActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Security">Security</a></li>

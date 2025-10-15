@@ -26,7 +26,6 @@ import OpenAccount from '../components/OpenAccount.jsx'
 import Faqs from '../components/Faqs.jsx'
 
 const Home = () => {
-
   const [toggle, setToggle] = useState(0)
   const [click, setClick] = useState(0)
 
