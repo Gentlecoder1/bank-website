@@ -219,7 +219,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            
+                        
             {/* product */}
             <div className='py-8 mb-10 space-y-8 xl:w-[1280px] lg:w-full md:w-full w-full mx-5'>
                 <div className='px-6 sm:px-8 space-y-5 md:space-y-0 md:space-x-5 md:flex justify-between items-center md:text-left text-center text-white'>
