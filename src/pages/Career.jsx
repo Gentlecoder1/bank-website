@@ -104,7 +104,6 @@ const Career = () => {
 
   return (
     <div className='flex flex-col items-center'>
-        <Nav />
 
         <div className='xl:w-[1280px] lg:mx-8 lg:px-8 mx-5 flex flex-col justify-center relative pt-25'>
 
@@ -214,7 +213,7 @@ const Career = () => {
 
         <Faqs />
         <OpenAccount />
-        <Footer />
+
     </div>
   )
 }

@@ -4,15 +4,13 @@ import SignAbstract from '../assets/signAbstract.png'
 import Google from '../assets/google.png'
 import Facebook from '../assets/facebook.png'
 import Apple from '../assets/apple.png'
-import Nav from '../components/Nav.jsx'
-import Footer from '../components/Footer.jsx'
 import Testimonials from '../components/Testimonials.jsx'
-import App from '../App.jsx'
+
 
 const Login = () => {
   return (
     <div className='mx-auto'>
-        <Nav />
+
         <div className='pt-40 pb-10 lg:pt-30 px-5 '>
             <div data-aos="fade-up" className='mx-auto relative rounded-xl lg:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${SignUpbg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent'}}>
                 <div className='flex justify-center items-center px-[2rem] md:px-[5rem] py-[3rem]' style={{ backgroundImage: `url(${SignAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top'}}>
@@ -74,7 +72,7 @@ const Login = () => {
         </div>
 
         <Testimonials />
-        <Footer />
+
     </div>
 
   )

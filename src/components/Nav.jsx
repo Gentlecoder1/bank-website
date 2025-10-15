@@ -34,7 +34,7 @@ const Nav = () => {
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
                 <h1 className='text-xl'>YourBanK</h1>
             </div>
-            <ul className='md:flex gap-5 hidden items-center'>
+            <ul className='md:flex gap-10 hidden items-center'>
                 <li className={`${isHomeActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/home">Home</a></li>
                 <li className={`${isCareerActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/Career">Careers</a></li>
                 <li className={`${isAboutActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/About">About</a></li>

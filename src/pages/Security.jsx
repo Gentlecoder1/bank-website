@@ -40,7 +40,6 @@ const Security = () => {
 
   return (
     <div className='flex flex-col items-center'>
-        <Nav />
 
         <div className='xl:w-[1280px] lg:mx-8 lg:px-8 mx-5 relative pt-25'>
 
@@ -68,7 +67,6 @@ const Security = () => {
         </div>
 
         <Faqs />
-        <Footer />
     </div>
   )
 }

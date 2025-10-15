@@ -19,8 +19,6 @@ import Case5 from '../assets/case5.png'
 import Case6 from '../assets/case6.png'
 import Case7 from '../assets/case7.png'
 import Case8 from '../assets/case8.png'
-import Nav from '../components/Nav.jsx'
-import Footer from '../components/Footer.jsx'
 import Testimonials from '../components/Testimonials.jsx'
 import OpenAccount from '../components/OpenAccount.jsx'
 import Faqs from '../components/Faqs.jsx'
@@ -195,7 +193,6 @@ const Home = () => {
 
   return (
     <div className='mx-auto' style={{ backgroundImage: `url(${homeAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left top', backgroundSize: '50%' }}>
-        <Nav />
 
         <div className='w-full flex flex-col mx-auto items-center relative pt-25'>
             {/* hero */}
@@ -429,7 +426,6 @@ const Home = () => {
         <Faqs />
         <Testimonials />
         <OpenAccount />
-        <Footer />
     </div>
   )
 }
