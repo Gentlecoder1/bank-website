@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Logo from '../assets/shape-30.logo.png'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
 
@@ -34,24 +35,24 @@ const Nav = () => {
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
                 <h1 className='text-xl'>YourBanK</h1>
             </div>
-            <ul className='md:flex gap-10 hidden items-center'>
-                <li className={`${isHomeActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/home">Home</a></li>
-                <li className={`${isCareerActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/Career">Careers</a></li>
-                <li className={`${isAboutActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/About">About</a></li>
-                <li className={`${isSecurityActive ? 'bg-[#262727] py-2 px-3 rounded-3xl' : 'bg-none'}`}><a href="/Security">Security</a></li>
+            <ul className='md:flex space-x-10 hidden items-center'>
+                <li className={`${isHomeActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/Home">Home</Link></li>
+                <li className={`${isCareerActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/Career">Careers</Link></li>
+                <li className={`${isAboutActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/About">About</Link></li>
+                <li className={`${isSecurityActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/Security">Security</Link></li>
             </ul>
 
             <div className={`hidden md:flex space-x-8 md:space-x-2`}>
               <div
                 className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isSignUpActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
-                <a href="/SignUp">Sign Up</a>
+                <Link to="/SignUp">Sign Up</Link>
               </div>
 
               <div
                 className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isLoginActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
-                <a href="/Login">Login</a>
+                <Link to="/Login">Login</Link>
               </div>
             </div>
 
@@ -64,29 +65,29 @@ const Nav = () => {
 
         <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`} >
             <ul className='flex flex-col items-center p-4 space-y-4 '>
-                <li className={`${isHomeActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Home">Home</a></li>
-                <li className={`${isCareerActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Career">Careers</a></li>
-                <li className={`${isAboutActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/About">About</a></li>
-                <li className={`${isSecurityActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><a href="/Security">Security</a></li>
+                <li className={`${isHomeActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/Home">Home</Link></li>
+                <li className={`${isCareerActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/Career">Careers</Link></li>
+                <li className={`${isAboutActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/About">About</Link></li>
+                <li className={`${isSecurityActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/Security">Security</Link></li>
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>
               
-              <a href="/SignUp">
+              <Link to="/SignUp">
                 <div
                   className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${isSignUpActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
                 >
                   Sign Up
                 </div>
-              </a>
+              </Link>
 
-              <a href="/Login">
+              <Link to="/Login">
                 <div
                   className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${isLoginActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
                 >
                   Login
                 </div>
-              </a>
+              </Link>
             </div>
         </div>
     </header>

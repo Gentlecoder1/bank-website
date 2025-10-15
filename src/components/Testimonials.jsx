@@ -120,12 +120,12 @@ const Testimonials = () => {
     <div className='w-full flex mx-auto justify-center relative my-7'>
         <div className='text-white xl:w-[1280px] lg:w-full md:w-full w-full lg:mx-16 mx-5 p-6'>
           <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex md:justify-between items-center md:text-left text-center'>
-            <div className='xl:max-w-[700px] md:max-w-[500px] space-y-3' data-aos="fade-up">
+            <div className='xl:max-w-[700px] lg:max-w-[500px] md:max-w-[400px] space-y-3' data-aos="fade-up">
               <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Testimonials</b></h1>
               <p className='text-gray-300 text-sm'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
             </div>
 
-            <div className={`rounded-full mx-auto md:mx-0 md:ml-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-2`} data-aos="fade-up">
+            <div className={`rounded-full mx-auto md:mx-0 md:ml-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-0 lg:space-x-2 text-[15px]`} data-aos="fade-up">
               <div
                 onClick={toggleLeft}
                 className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
