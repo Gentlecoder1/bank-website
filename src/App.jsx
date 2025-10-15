@@ -8,13 +8,13 @@ const About = lazy(() => import('./pages/About.jsx'))
 const Security = lazy(() => import('./pages/Security.jsx'))
 const SignUp = lazy(() => import('./pages/SignUp.jsx'))
 const Login = lazy(() => import('./pages/Login.jsx'))
-import { ClipLoader } from "react-spinners";
+import { RingLoader } from "react-spinners";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Suspense fallback={<div className="p-8 h-[100vh] flex items-center justify-center text-center"><ClipLoader size={58} className='m-auto' /></div>}>
+        <Suspense fallback={<div className="p-8 h-[100vh] flex items-center justify-center text-center"><RingLoader size={58} color='#CBFE33' className='m-auto' /></div>}>
           <Nav />
           <Routes>
             <Route index element={<Home />} />

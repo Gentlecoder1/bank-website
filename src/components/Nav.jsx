@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Logo from '../assets/shape-30.logo.png'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
 
@@ -14,7 +14,7 @@ const Nav = () => {
         setBurger(!burger)
     }
 
-
+    const [toggle, setToggle] = useState(0)
 
   // derive active link from current pathname so direct navigation highlights the correct toggle
   const pathname = typeof window !== 'undefined' ? window.location.pathname.toLowerCase() : ''
@@ -36,24 +36,16 @@ const Nav = () => {
                 <h1 className='text-xl'>YourBanK</h1>
             </div>
             <ul className='md:flex space-x-10 hidden items-center'>
-                <li className={`${isHomeActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/Home">Home</Link></li>
-                <li className={`${isCareerActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/Career">Careers</Link></li>
-                <li className={`${isAboutActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/About">About</Link></li>
-                <li className={`${isSecurityActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'}`}><Link to="/Security">Security</Link></li>
+                <li><NavLink className={({isActive}) => isActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'} to="/Home">Home</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'} to="/Career">Careers</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'} to="/About">About</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? 'bg-[#262727] py-2 px-5 rounded-3xl' : 'bg-none'} to="/Security">Security</NavLink></li>
             </ul>
 
-            <div className={`hidden md:flex space-x-8 md:space-x-2`}>
-              <div
-                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isSignUpActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
-              >
-                <Link to="/SignUp">Sign Up</Link>
-              </div>
+            <div className={`hidden md:flex space-x-8 md:space-x-4`}>
+              <NavLink to="/SignUp" className={({isActive}) => `relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}>Sign Up</NavLink>
 
-              <div
-                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isLoginActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
-              >
-                <Link to="/Login">Login</Link>
-              </div>
+              <NavLink to="/Login" className={({isActive}) => `relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}>Login</NavLink>
             </div>
 
             <div onClick={openNav} className='bg-[#CBFE33] cursor-pointer md:hidden rounded-4xl py-2 px-5'>
@@ -63,31 +55,27 @@ const Nav = () => {
             </div>
         </div>
 
+        {/* mobile */}
         <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`} >
             <ul className='flex flex-col items-center p-4 space-y-4 '>
-                <li className={`${isHomeActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/Home">Home</Link></li>
-                <li className={`${isCareerActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/Career">Careers</Link></li>
-                <li className={`${isAboutActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/About">About</Link></li>
-                <li className={`${isSecurityActive ? 'bg-[#262727] w-[150px] text-center py-2 px-10 rounded-3xl' : 'bg-none'}`}><Link to="/Security">Security</Link></li>
+              <li className='w-full text-center'>
+                <NavLink onClick={() => setBurger(false)} to="/Home" className={({isActive}) => isActive ? 'bg-[#262727] w-[150px] inline-block py-2 px-10 rounded-3xl' : 'w-[150px] inline-block py-2 px-10'}>Home</NavLink>
+              </li>
+              <li className='w-full text-center'>
+                <NavLink onClick={() => setBurger(false)} to="/Career" className={({isActive}) => isActive ? 'bg-[#262727] w-[150px] inline-block py-2 px-10 rounded-3xl' : 'w-[150px] inline-block py-2 px-10'}>Careers</NavLink>
+              </li>
+              <li className='w-full text-center'>
+                <NavLink onClick={() => setBurger(false)} to="/About" className={({isActive}) => isActive ? 'bg-[#262727] w-[150px] inline-block py-2 px-10 rounded-3xl' : 'w-[150px] inline-block py-2 px-10'}>About</NavLink>
+              </li>
+              <li className='w-full text-center'>
+                <NavLink onClick={() => setBurger(false)} to="/Security" className={({isActive}) => isActive ? 'bg-[#262727] w-[150px] inline-block py-2 px-10 rounded-3xl' : 'w-[150px] inline-block py-2 px-10'}>Security</NavLink>
+              </li>
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>
+              <NavLink onClick={() => setBurger(false)} to="/SignUp" className='px-4 py-2 rounded-full bg-[#CBFE33] text-black font-semibold'>Sign Up</NavLink>
               
-              <Link to="/SignUp">
-                <div
-                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${isSignUpActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
-                >
-                  Sign Up
-                </div>
-              </Link>
-
-              <Link to="/Login">
-                <div
-                  className={`relative w-fit h-fit text-center py-2 px-5 rounded-full cursor-pointer transition-colors duration-300 ${isLoginActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
-                >
-                  Login
-                </div>
-              </Link>
+              <NavLink onClick={() => setBurger(false)} to="/Login" className='px-4 py-2 rounded-full border border-gray-600'>Login</NavLink>
             </div>
         </div>
     </header>
