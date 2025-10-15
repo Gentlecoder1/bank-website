@@ -1,5 +1,5 @@
 import React from 'react'
-import security from '../assets/security-hero-image.png'
+import security from '../assets/security-hero-Image.png'
 import protect1 from '../assets/case1.png'
 import protect2 from '../assets/case2.png'
 import protect3 from '../assets/case3.png'
