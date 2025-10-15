@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { GoArrowUpRight } from "react-icons/go";
-import checkIcon from '../assets/check-icon.png'
+import checkIcon from '../assets/check-Icon.png'
 import homeAbstract from '../assets/home-abstract.png'
 import home2Abstract from '../assets/home2-abstract.png'
 import Homehero from '../assets/home-hero.svg'

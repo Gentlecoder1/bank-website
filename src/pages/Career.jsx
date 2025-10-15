@@ -1,5 +1,5 @@
 import react from 'react'
-import career from '../assets/career-image.png'
+import career from '../assets/career-Image.png'
 import Value1 from '../assets/value1.png'
 import Value2 from '../assets/value2.png'
 import Value3 from '../assets/value3.png'
