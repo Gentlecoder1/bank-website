@@ -98,7 +98,7 @@ const About = () => {
 
                 <div className='md:grid grid-cols-2 gap-4 lg:space-y-0 space-y-5'>
                     {releases.map((press, idx) => (
-                    <div key={idx} className='p-5 lg:p-[30px] rounded-3xl bg-[#1C1C1C] border border-[#262626] space-y-5' data-aos="fade-up">
+                    <div key={idx} className='p-5 lg:p-[30px] h-full rounded-3xl bg-[#1C1C1C] border border-[#262626] space-y-5' data-aos="fade-up">
                         <img src={press.image} className='rounded-t-3xl rounded-b-xl' alt="" data-aos="fade-up" />
                         <div className='space-y-3' data-aos="fade-up">
                             <h1 className='text-[20px] font-semibold'>{press.title}</h1>

@@ -29,7 +29,7 @@ const Nav = () => {
   return (
     <header className='fixed w-full z-100 flex flex-col items-center xl:px-16 px-5'>
         <div
-            className='xl:w-[1280px] lg:w-full md:w-full w-full lg:px-16 px-5 text-white bg-[#1D1C1D]/70 backdrop-blur-md shadow-lg shadow-[#969b86] lg:my-5 mt-10 flex justify-between md:py-4 py-4 rounded-[70px] items-center'
+            className='xl:w-[1280px] lg:w-full md:w-full w-full lg:px-16 px-5 text-white bg-[#1D1C1D]/70 backdrop-blur-md shadow-lg shadow-[#969b86] lg:my-5 mt-6 flex justify-between md:py-4 py-4 rounded-[70px] items-center'
         >
             <div className='flex items-center'>
                 <img src={Logo} className='w-5 h-5' alt="Logo" />
@@ -43,12 +43,12 @@ const Nav = () => {
             </ul>
 
             <div className={`hidden md:flex space-x-8 md:space-x-4`}>
-              <NavLink to="/SignUp" className={({isActive}) => `relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}>Sign Up</NavLink>
+              <NavLink to="/SignUp" className={({isActive}) => `relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isActive ? 'bg-[#CaFE33] text-black' : 'bg-none'}`}>Sign Up</NavLink>
 
-              <NavLink to="/Login" className={({isActive}) => `relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isActive ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}>Login</NavLink>
+              <NavLink to="/Login" className={({isActive}) => `relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${isActive ? 'bg-[#CAFE33] text-black' : 'bg-none'}`}>Login</NavLink>
             </div>
 
-            <div onClick={openNav} className='bg-[#CBFE33] cursor-pointer md:hidden rounded-4xl py-2 px-5'>
+            <div onClick={openNav} className='bg-[#CAFE33] cursor-pointer md:hidden rounded-4xl py-2 px-5'>
                 <div className={`transition-transform duration-300 ${burger ? 'rotate-90' : 'rotate-0'}`}>
                     {burger ? <FaTimes color='black' size={20} /> : <HiMenuAlt3 color='black' size={20} />}
                 </div>
@@ -56,7 +56,7 @@ const Nav = () => {
         </div>
 
         {/* mobile */}
-        <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`} >
+        <div className={`transition-all duration-900 overflow-hidden ${!burger ? "max-h-0  w-full" : `${burgerStyle}`}`}>
             <ul className='flex flex-col items-center p-4 space-y-4 '>
               <li className='w-full text-center'>
                 <NavLink onClick={() => setBurger(false)} to="/Home" className={({isActive}) => isActive ? 'bg-[#262727] w-[150px] inline-block py-2 px-10 rounded-3xl' : 'w-[150px] inline-block py-2 px-10'}>Home</NavLink>
@@ -73,9 +73,9 @@ const Nav = () => {
             </ul>
 
             <div className={`flex font-semibold space-x-5 justify-center`}>
-              <NavLink onClick={() => setBurger(false)} to="/SignUp" className='px-4 py-2 rounded-full bg-[#CBFE33] text-black font-semibold'>Sign Up</NavLink>
+              <NavLink onClick={() => setBurger(false)} to="/SignUp" className={({isActive}) => isActive ? 'bg-[#CAFE33] py-2 px-6 rounded-3xl text-black' : 'py-2 px-6'}>Sign Up</NavLink>
               
-              <NavLink onClick={() => setBurger(false)} to="/Login" className='px-4 py-2 rounded-full border border-gray-600'>Login</NavLink>
+              <NavLink onClick={() => setBurger(false)} to="/Login" className={({isActive}) => isActive ? 'bg-[#CAFE33] py-2 px-6 rounded-3xl text-black' : 'py-2 px-6'}>Login</NavLink>
             </div>
         </div>
     </header>
