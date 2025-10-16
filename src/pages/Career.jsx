@@ -208,7 +208,6 @@ const Career = () => {
                   ))}
                 </div>
             </div>
-
         </div>
 
         <Faqs />

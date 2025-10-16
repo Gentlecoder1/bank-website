@@ -330,8 +330,8 @@ const Home = () => {
                             </div>
                         </div>
                         
-                        <div className='cursor-pointer transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
-                            <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                            <button className='cursor-pointer text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
                             Load more
                             </button>
                         </div>
@@ -379,8 +379,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='cursor-pointer transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
-                            <button className='text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
+                        <div className='transition-all duration-300 transform hover:scale-105 flex items-center w-fit'>
+                            <button className='cursor-pointer text-sm font-bold border border-gray-600 rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 hover:bg-[#CBFE33] hover:text-black' data-aos="fade-up">
                                 Load more
                             </button>
                         </div>

@@ -86,8 +86,8 @@ const Faqs = () => {
                     
                 </div>
                 
-                <div className='cursor-pointer transition-all duration-300 transform hover:scale-105 h-fit mt-6 flex mx-auto items-center w-fit'>
-                    <button className='text-sm flex items-center gap-2 font-bold border border-[#262626] rounded-full py-2 px-4 mx-auto hover:bg-[#CBFE33] hover:text-black' onClick={show} data-aos="fade-up">{less ? "Load All" :" Load less"}
+                <div className='transition-all duration-300 transform hover:scale-105 h-fit mt-6 flex mx-auto items-center w-fit'>
+                    <button className='cursor-pointer text-sm flex items-center gap-2 font-bold border border-[#262626] rounded-full py-2 px-4 mx-auto hover:bg-[#CBFE33] hover:text-black' onClick={show} data-aos="fade-up">{less ? "Load All" :" Load less"}
                         <div className={`transition-transform duration-300 ${less ? 'rotate-180' : 'rotate-0'}`}>
                             <GoChevronDown size={20} />
                         </div>
