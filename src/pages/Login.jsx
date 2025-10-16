@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import SignUpbg from '../assets/SignUp-bg.png'
 import SignAbstract from '../assets/signAbstract.png'
 import Google from '../assets/google.png'
@@ -8,6 +9,24 @@ import Testimonials from '../components/Testimonials.jsx'
 
 
 const Login = () => {
+    const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
+
+    const handleLogin = async (e) => {
+        e.preventDefault()
+        try {
+            setLoading(true)
+            // TODO: replace with real auth call
+            // Simulate async login
+            await new Promise(res => setTimeout(res, 600))
+            navigate('/Home')
+        } catch (err) {
+            console.error('Login failed', err)
+            // TODO: surface error to user
+        } finally {
+            setLoading(false)
+        }
+    }
   return (
     <div className='mx-auto'>
 
@@ -19,7 +38,7 @@ const Login = () => {
                             <h1 className='text-4xl font-bold text-[#CAFE33]'>Login</h1>
                             <p className='text-center md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]'>Welcome back! Please log in to access your account.</p>
                         </div>
-                        <form action="#">
+                        <form onSubmit={handleLogin}>
                             <div className='lg:grid grid-cols-2 gap-6 space-y-3 lg:space-y-0 my-8' data-aos="fade-up">
                                 
                                 <div className='rounded-full border border-[#262626] bg-[#1A1A1A]'>
@@ -31,17 +50,26 @@ const Login = () => {
                                 
                             </div>
 
-                            <div className='mx-auto max-w-[500px] flex flex-col items-center space-y-6'>
-                                <a className=' w-full transition-all duration-300 transform hover:scale-102' href="#">
-                                    <button type='submit' className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black' data-aos="fade-up">Login</button>
-                                </a>
-                            </div>
+                                                        <div className='mx-auto max-w-[500px] flex flex-col items-center space-y-6'>
+                                                                <button
+                                                                    type='submit'
+                                                                    disabled={loading}
+                                                                    className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-102'
+                                                                    data-aos="fade-up"
+                                                                >
+                                                                    {loading ? 'Logging in…' : 'Login'}
+                                                                </button>
+                                                        </div>
                         </form>
 
-                        <div className='mx-auto mt-6 max-w-[500px] flex flex-col items-center space-y-6'>
-                            <a className='w-full transition-all duration-300 transform hover:scale-102' href="/SignUp">
-                                <button className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black' data-aos="fade-up">Sign Up</button>
-                            </a>
+                                                <div className='mx-auto mt-6 max-w-[500px] flex flex-col items-center space-y-6'>
+                                                        <Link
+                                                            to='/SignUp'
+                                                            className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black transition-all duration-300 transform hover:scale-102'
+                                                            data-aos="fade-up"
+                                                        >
+                                                            Sign Up
+                                                        </Link>
                             <div className='flex space-x-5 w-full mx-auto items-center mb-4' data-aos="fade-up">
                                 <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
                                 <p className='w-full md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] flex-nowrap'>Or Continue with </p>
