@@ -81,12 +81,12 @@ const SignUp = () => {
 
                             <div className='flex space-x-4'>
                                 <div className='transition-all duration-300 transform hover:scale-115'>
-                                    <a href="#" data-aos="fade-up">
+                                    <a href="https://web.facebook.com/profile.php?id=100080255029301" target='blank' data-aos="fade-up">
                                         <img src={Google} alt="" />
                                     </a>
                                 </div>
                                 <div className='transition-all duration-300 transform hover:scale-115'>
-                                    <a href="#" data-aos="fade-up">
+                                    <a href="https://web.facebook.com/profile.php?id=100080255029301" target='blank' data-aos="fade-up">
                                         <img src={Facebook} alt="" />
                                     </a>
                                 </div>

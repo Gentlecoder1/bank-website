@@ -50,26 +50,26 @@ const Login = () => {
                                 
                             </div>
 
-                                                        <div className='mx-auto max-w-[500px] flex flex-col items-center space-y-6'>
-                                                                <button
-                                                                    type='submit'
-                                                                    disabled={loading}
-                                                                    className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-102'
-                                                                    data-aos="fade-up"
-                                                                >
-                                                                    {loading ? 'Logging in…' : 'Login'}
-                                                                </button>
-                                                        </div>
+                            <div className='mx-auto max-w-[500px] flex flex-col items-center space-y-6'>
+                                <button
+                                    type='submit'
+                                    disabled={loading}
+                                    className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-102'
+                                    data-aos="fade-up"
+                                >
+                                    {loading ? 'Logging in…' : 'Login'}
+                                </button>
+                            </div>
                         </form>
 
-                                                <div className='mx-auto mt-6 max-w-[500px] flex flex-col items-center space-y-6'>
-                                                        <Link
-                                                            to='/SignUp'
-                                                            className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black transition-all duration-300 transform hover:scale-102'
-                                                            data-aos="fade-up"
-                                                        >
-                                                            Sign Up
-                                                        </Link>
+                        <div className='mx-auto mt-6 max-w-[500px] flex flex-col items-center space-y-6'>
+                            <Link
+                                to='/SignUp'
+                                className='w-full rounded-full border border-[#333333] text-center md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] bg-[#262626] p-4 hover:bg-[#CAFE33] hover:text-black transition-all duration-300 transform hover:scale-102'
+                                data-aos="fade-up"
+                            >
+                                Sign Up
+                            </Link>
                             <div className='flex space-x-5 w-full mx-auto items-center mb-4' data-aos="fade-up">
                                 <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
                                 <p className='w-full md:text-[16px] text-[14px] font-[700] text-[#B3B3B3] flex-nowrap'>Or Continue with </p>
@@ -83,7 +83,7 @@ const Login = () => {
                                     </a>
                                 </div>
                                 <div className='transition-all duration-300 transform hover:scale-115'>
-                                    <a href="#" data-aos="fade-up">
+                                    <a href="https://web.facebook.com/profile.php?id=100080255029301" target='blank' data-aos="fade-up">
                                         <img src={Facebook} alt="" />
                                     </a>
                                 </div>

@@ -201,7 +201,7 @@ const Career = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className='md:text-[16px] text-[14px] rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
+                      <button className='cursor-pointer md:text-[16px] text-[14px] rounded-full py-2 px-4 mx-auto transition-all duration-300 transform hover:scale-105 bg-[#CBFE33] text-black' data-aos="fade-up">
                         Apply Now
                       </button>
                     </div>

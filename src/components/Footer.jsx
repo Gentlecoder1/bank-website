@@ -42,9 +42,9 @@ const Footer = () => {
             <div className="h-[1px] w-full border border-[#262626] mb-6" />
             
             <div className='flex space-x-7 space-y-5 sm:space-y-0 flex-wrap items-center justify-center text-white text-md' data-aos="fade-up">
-                <p className='flex items-center gap-2' data-aos="fade-up"><CiMail size={20} /> hello@skillbirdge.com</p>
-                <p className='flex items-center gap-2' data-aos="fade-up"><FaPhoneAlt />  +91813232309</p>
-                <p className='flex items-center gap-2' data-aos="fade-up"><FaMapMarkerAlt /> Somewhere in the World</p>
+                <p className='flex items-center gap-2' data-aos="fade-up"><CiMail size={20} /> israeloloruntoba3@gmail.com</p>
+                <p className='flex items-center gap-2' data-aos="fade-up"><FaPhoneAlt />  +234 9161017009</p>
+                <p className='flex items-center gap-2' data-aos="fade-up"><FaMapMarkerAlt /> Global Space</p>
             </div>
             
             <div className="h-[1px] w-full border border-[#262626] mt-6 mb-3" />
