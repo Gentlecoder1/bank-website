@@ -52,9 +52,9 @@ const Footer = () => {
 
             <div className='md:flex justify-between border border-[#262626] mt-7 md:p-2 p-5 place-items-center md:rounded-full rounded-2xl'>
                 <div className='flex relative gap-2 md:-top-0 -top-10 w-fit'>
-                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialFacebook size={25} /></div>
-                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialTwitter size={25} /></div>
-                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><TiSocialLinkedin size={25} /></div>
+                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><a href="https://web.facebook.com/profile.php?id=100080255029301" target='blank'><TiSocialFacebook size={25} /></a></div>
+                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><a href="https://x.com/IsraelOlor63852" target='blank'><TiSocialTwitter size={25} /></a></div>
+                    <div className='rounded-full w-fit p-2 bg-[#CBFE33] transition-all duration-300 transform hover:scale-115'><a href="https://www.linkedin.com/in/israel-oloruntoba-0b383537a/" target='blank'><TiSocialLinkedin size={25} /></a></div>
                 </div>
                 <div className='md:-mt-0 -mt-5 md:mb-0 mb-4' data-aos="fade-up">
                     <p className='text-md text-gray-100'>YourBank All Rights Reserved</p>
