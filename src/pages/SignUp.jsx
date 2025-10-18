@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import SignUpbg from '../assets/SignUp-bg.png'
+import Authbg from '../assets/auth-bg.svg'
 import SignAbstract from '../assets/signAbstract.png'
 import Google from '../assets/google.png'
 import Facebook from '../assets/facebook.png'
@@ -29,7 +29,7 @@ const SignUp = () => {
   return (
     <div className='mx-auto'>
         <div className='pt-40 pb-10 lg:pt-30 px-5 '>
-            <div data-aos="fade-up" className='mx-auto relative rounded-xl lg:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${SignUpbg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent'}}>
+            <div data-aos="fade-up" className='mx-auto relative rounded-xl lg:w-[1000px] bg-[#1C1C1C]' style={{ backgroundImage: `url(${Authbg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent'}}>
                 <div className='flex justify-center items-center px-[2rem] md:px-[5rem] py-[3rem]' style={{ backgroundImage: `url(${SignAbstract})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right top'}}>
                     <div className='w-full'>
                         <div className='text-center space-y-3' data-aos="fade-up">

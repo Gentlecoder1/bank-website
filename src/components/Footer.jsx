@@ -31,7 +31,7 @@ const Footer = () => {
                     <img src={Logo} alt="logo" />
                     <h1 className='text-[#B3B3B3] md:text-[20px] text-[16px] font-[800] text-xl'>YourBanK</h1>
                 </div>
-                <ul className='flex justify-center gap-5 my-6 text-[#B3B3B3] md:text-[16px] text-[14px] font-[300] hover:text-[#CAFE33]' data-aos="fade-up">
+                <ul className='flex justify-center gap-5 my-6' data-aos="fade-up">
                     <li className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300] hover:text-[#CAFE33]'><a href="#">Home</a></li>
                     <li className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300] hover:text-[#CAFE33]'><a href="#">Careers</a></li>
                     <li className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300] hover:text-[#CAFE33]'><a href="#">About</a></li>
@@ -41,7 +41,7 @@ const Footer = () => {
 
             <div className="h-[1px] w-full border border-[#262626] mb-6" />
             
-            <div className='flex space-x-7 sm:space-y-0 flex-wrap items-center justify-center text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]' data-aos="fade-up">
+            <div className='flex space-x-7 gap-2 flex-wrap items-center justify-center text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]' data-aos="fade-up">
                 <p className='flex items-center gap-2' data-aos="fade-up"><CiMail size={20} color='white' /> israeloloruntoba3@gmail.com</p>
                 <p className='flex items-center gap-2' data-aos="fade-up"><FaPhoneAlt color='white' />  +234 9161017009</p>
                 <p className='flex items-center gap-2' data-aos="fade-up"><FaMapMarkerAlt color='white' /> Global Space</p>

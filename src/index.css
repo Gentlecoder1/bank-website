@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Scrollbar hide utility */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
