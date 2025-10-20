@@ -122,20 +122,20 @@ const Testimonials = () => {
           <div className='space-y-5 md:space-y-0 md:space-x-10 md:flex md:justify-between items-center md:text-left text-center'>
             <div className='xl:max-w-[700px] lg:max-w-[500px] md:max-w-[400px] space-y-3' data-aos="fade-up">
               <h1 className='text-3xl font-bold'>Our <b className='text-[#CBFE33]'>Testimonials</b></h1>
-              <p className='text-gray-300 text-sm'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
+              <p className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300]'>Discoverhow YourBanK has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
             </div>
 
             <div className={`rounded-full mx-auto md:mx-0 md:ml-auto border border-[#CBFE33] flex px-3 py-2 w-fit h-fit space-x-8 md:space-x-0 lg:space-x-2 text-[15px]`} data-aos="fade-up">
               <div
                 onClick={toggleLeft}
-                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                className={`md:text-[16px] text-[14px] font-[300] relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 0 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
                 For Individuals
               </div>
 
               <div
                 onClick={toggleRight}
-                className={`relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
+                className={`md:text-[16px] text-[14px] font-[300] relative w-fit h-fit text-center py-2 px-4 rounded-full cursor-pointer transition-colors duration-300 ${toggle === 1 ? 'bg-[#CBFE33] text-black' : 'bg-none'}`}
               >
                 For Business
               </div>
@@ -167,7 +167,7 @@ const Testimonials = () => {
                             <img src={Quote} alt="Quote" />
                             <hr className='w-full h-[0.1px] bg-gray-400 border-0' />
                           </div>
-                          <p className='text-sm leading-relaxed flex-grow flex items-center justify-center text-center px-2'>
+                          <p className='text-[#B3B3B3] md:text-[16px] text-[14px] font-[300] leading-relaxed flex-grow flex items-center justify-center text-center px-2'>
                             {testimonial.text}
                           </p>
                         </div>

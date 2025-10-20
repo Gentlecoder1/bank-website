@@ -14,18 +14,6 @@ const Nav = () => {
         setBurger(!burger)
     }
 
-    const [toggle, setToggle] = useState(0)
-
-  // derive active link from current pathname so direct navigation highlights the correct toggle
-  const pathname = typeof window !== 'undefined' ? window.location.pathname.toLowerCase() : ''
-  const isHomeActive = pathname.includes('/home')
-  const isCareerActive = pathname.includes('/career')
-  const isAboutActive = pathname.includes('/about')
-  const isSecurityActive = pathname.includes('/security')
-
-  const isSignUpActive = pathname.includes('/signup')
-  const isLoginActive = pathname.includes('/login')
-
   return (
     <header className='fixed w-full z-100 flex flex-col items-center xl:px-16 px-5'>
         <div
