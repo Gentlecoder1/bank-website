@@ -21,7 +21,7 @@ const Login = () => {
             await new Promise(res => setTimeout(res, 600))
             navigate('/Home')
         } catch (err) {
-            console.error('Login failed', err)
+            alert(`Sign up failed: ${err?.message || 'Please try again'}`)
             // TODO: surface error to user
         } finally {
             setLoading(false)

@@ -17,11 +17,10 @@ const SignUp = () => {
             setLoading(true)
             // TODO: Replace with real sign-up API call
             await new Promise(res => setTimeout(res, 700))
-            // After successful sign-up, navigate to Login (or Home if you prefer)
+            
             navigate('/Login')
         } catch (err) {
-            console.error('Sign up failed', err)
-            // TODO: Show error to user
+            alert(`Sign up failed: ${err?.message || 'Please try again'}`)
         } finally {
             setLoading(false)
         }
@@ -50,7 +49,6 @@ const SignUp = () => {
                                 <div className='rounded-full border border-[#262626] bg-[#1A1A1A]'>
                                     <input type="password" className='bg-transparent outline-0 w-full rounded-xl p-4 cursor-pointer md:text-[16px] text-[14px] font-[300] text-[#B3B3B3]' required placeholder='Enter your Password' />
                                 </div>
-                                
                             </div>
 
                             <div className='mx-auto max-w-[500px] flex flex-col items-center space-y-6'>
